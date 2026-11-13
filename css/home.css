@@ -1,0 +1,21 @@
+.home-sections { max-width: var(--maxw); margin: 0 auto; padding: var(--space-8) var(--space-4); }
+.home-sections h2 { margin-bottom: var(--space-4); }
+.home-featured, .home-new, .home-atelier, .home-delivery { margin-bottom: var(--space-12); }
+.home-featured .product-grid, .home-new .product-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: var(--space-6); }
+.home-featured .product-card, .home-new .product-card { border: 1px solid var(--travertine); background: var(--ivory); display: flex; flex-direction: column; }
+.home-featured .product-card-media, .home-new .product-card-media { aspect-ratio: 4 / 5; background: var(--travertine); position: relative; overflow: hidden; }
+.home-featured .product-card-media img, .home-new .product-card-media img { width: 100%; height: 100%; object-fit: cover; }
+.home-featured .img-fallback, .home-new .img-fallback { position: absolute; inset: 0; display: none; place-items: center; color: var(--taupe); font-size: 0.85rem; text-align: center; padding: var(--space-4); }
+.home-featured .product-card-body, .home-new .product-card-body { padding: var(--space-4); display: flex; flex-direction: column; gap: var(--space-2); flex: 1; }
+.home-featured .product-card-title, .home-new .product-card-title { font-family: var(--font-display); font-size: 1.15rem; margin: 0; }
+.home-featured .product-card-price, .home-new .product-card-price { color: var(--espresso); font-weight: 500; }
+.home-featured .product-card-price del, .home-new .product-card-price del { color: var(--taupe); font-weight: 400; margin-inline-end: var(--space-2); }
+.home-featured .product-card-actions, .home-new .product-card-actions { display: flex; gap: var(--space-2); margin-top: auto; flex-wrap: wrap; }
+.home-atelier-inner, .home-delivery-inner { border: 1px solid var(--travertine); padding: var(--space-6); background: var(--ivory); }
+.home-atelier-inner h2, .home-delivery-inner h2 { margin-bottom: var(--space-3); }
+.home-contact { color: var(--taupe); font-size: 0.9rem; }
+.home-contact a { color: var(--espresso); }
+.stage-still-layer { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 1600ms ease; display: grid; place-items: center; color: var(--taupe); font-family: var(--font-display); font-size: 1.5rem; }
+.stage-still-layer.is-active { opacity: 1; }
+.stage-still-layer.is-placeholder { background: var(--ivory); }
+@media (prefers-reduced-motion: reduce) { .stage-still-layer { transition-duration: 200ms !important; } }

@@ -1,0 +1,72 @@
+{
+  "a-enter": {
+    "stop": "A",
+    "action": "stop",
+    "target": "B"
+  },
+  "a-mannequin": {
+    "stop": "A",
+    "action": "product",
+    "product": "robe-nuisette"
+  },
+  "b-torso-1": {
+    "stop": "B",
+    "action": "product",
+    "product": "body-en-dentelle-raffinee"
+  },
+  "b-set-2": {
+    "stop": "B",
+    "action": "product",
+    "product": "ensemble-elegance-noire"
+  },
+  "b-set-3": {
+    "stop": "B",
+    "action": "product",
+    "product": "ensemble-rouge"
+  },
+  "b-hanger-4": {
+    "stop": "B",
+    "action": "product",
+    "product": "pyjama"
+  },
+  "c-look-1": {
+    "stop": "C",
+    "action": "product",
+    "product": "robe-nuisette"
+  },
+  "c-look-2": {
+    "stop": "C",
+    "action": "product",
+    "product": "pyjama"
+  },
+  "c-look-3": {
+    "stop": "C",
+    "action": "product",
+    "product": "ensemble-rouge"
+  },
+  "c-case": {
+    "stop": "C",
+    "action": "product",
+    "product": "ensemble-elegance-noire"
+  },
+  "d-table": {
+    "stop": "D",
+    "action": "atelier"
+  },
+  "d-swatches": {
+    "stop": "D",
+    "action": "atelier"
+  },
+  "e-counter": {
+    "stop": "E",
+    "action": "cart"
+  },
+  "e-delivery": {
+    "stop": "E",
+    "action": "delivery"
+  },
+  "e-contact": {
+    "stop": "E",
+    "action": "contact"
+  }
+}

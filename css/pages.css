@@ -1,0 +1,29 @@
+/* Page-specific additions for catalog, product, atelier, admin */
+.product-not-found { padding: var(--space-8) 0; text-align: center; }
+.product-gallery-main .img-fallback,
+.product-card-media .img-fallback,
+.atelier-media .img-fallback {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  color: var(--taupe); font-size: 0.85rem; text-align: center; padding: var(--space-4);
+}
+.product-gallery-main, .product-card-media, .atelier-media { position: relative; }
+.atelier-form input[type="text"] {
+  min-height: var(--target);
+  padding: 0 var(--space-3);
+  border: 1px solid var(--travertine);
+  border-radius: var(--radius-btn);
+  background: var(--ivory);
+  color: var(--espresso);
+  max-width: 8ch;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.admin-table select {
+  min-height: var(--target);
+  padding: 0 var(--space-2);
+  border: 1px solid var(--travertine);
+  border-radius: var(--radius-btn);
+  background: var(--ivory);
+  color: var(--espresso);
+}

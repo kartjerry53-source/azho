@@ -1,0 +1,618 @@
+{
+  "version": 1,
+  "notice": "Every 3D garment is an approximate PLACEHOLDER of the real product.",
+  "placeholders": [
+    {
+      "name": "GARMENT_robe-nuisette_001",
+      "zone": "A",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_robe-nuisette_002",
+      "zone": "A",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_robe-nuisette_003",
+      "zone": "A",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_body-en-dentelle-raffinee_004",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_005",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_006",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_007",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_008",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_009",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_010",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_011",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_012",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_013",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_014",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_015",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_016",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_017",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_018",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_019",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_020",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_021",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_022",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_023",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_024",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_025",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_026",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_027",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_028",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_029",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_030",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_031",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_032",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_033",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_034",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_035",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_036",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_037",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_038",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_039",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_040",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_041",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_body-en-dentelle-raffinee_042",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_043",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_044",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_045",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_046",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_047",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_048",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_049",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_050",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_051",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_body-en-dentelle-raffinee_052",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_body-en-dentelle-raffinee_053",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_body-en-dentelle-raffinee_054",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_body-en-dentelle-raffinee_055",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_body-en-dentelle-raffinee_056",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_body-en-dentelle-raffinee_057",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_058",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_059",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_060",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_061",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_062",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_063",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_064",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_065",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_066",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_body-en-dentelle-raffinee_067",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_068",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_069",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_070",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_071",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_072",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_073",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_074",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_075",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_076",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_077",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_078",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_079",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_080",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_081",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_body-en-dentelle-raffinee_082",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_083",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_084",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_085",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_086",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_087",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_088",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_089",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_090",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_091",
+      "zone": "B",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_robe-nuisette_092",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_robe-nuisette_093",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_robe-nuisette_094",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_robe-nuisette_095",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_robe-nuisette_096",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_robe-nuisette_097",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_098",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_099",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_100",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_101",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_102",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_103",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_104",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_105",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_106",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama_107",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_108",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_109",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_110",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_111",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_112",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_113",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_114",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-rouge_115",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_116",
+      "zone": "C",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_117",
+      "zone": "C",
+      "azho_placeholder": true
+    }
+  ],
+  "hotspots_by_zone": {
+    "A": [
+      "a-enter",
+      "a-mannequin"
+    ],
+    "B": [
+      "b-torso-1",
+      "b-set-2",
+      "b-set-3",
+      "b-hanger-4"
+    ],
+    "C": [
+      "c-look-1",
+      "c-look-2",
+      "c-look-3",
+      "c-case"
+    ],
+    "D": [
+      "d-table",
+      "d-swatches"
+    ],
+    "E": [
+      "e-counter",
+      "e-delivery",
+      "e-contact"
+    ]
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "version": 1,
+  "stops": [
+    {
+      "id": "A",
+      "camera": [
+        0.0,
+        1.65,
+        -0.05
+      ],
+      "target": [
+        0.0,
+        2.05,
+        -3.65
+      ],
+      "fov": 70.0,
+      "fovMobile": 82.0,
+      "still": "assets/stops/A.jpg",
+      "stillMobile": "assets/stops/A-mobile.jpg",
+      "hotspots": [
+        {
+          "id": "a-enter",
+          "position": [
+            1.33,
+            1.7,
+            -3.2
+          ],
+          "screen": [
+            0.6703,
+            0.5679
+          ],
+          "screenMobile": [
+            0.9336,
+            0.5547
+          ]
+        },
+        {
+          "id": "a-mannequin",
+          "position": [
+            0.0,
+            1.39,
+            -3.39
+          ],
+          "screen": [
+            0.5,
+            0.6361
+          ],
+          "screenMobile": [
+            0.5,
+            0.6096
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "camera": [
+        -0.5,
+        1.7,
+        -7.15
+      ],
+      "target": [
+        4.05,
+        1.97,
+        -7.15
+      ],
+      "fov": 51.0,
+      "fovMobile": 90.0,
+      "still": "assets/stops/B.jpg",
+      "stillMobile": "assets/stops/B-mobile.jpg",
+      "hotspots": [
+        {
+          "id": "b-torso-1",
+          "position": [
+            3.79,
+            3.83,
+            -5.22
+          ],
+          "screen": [
+            0.7581,
+            0.0549
+          ],
+          "screenMobile": [
+            0.8891,
+            0.2877
+          ]
+        },
+        {
+          "id": "b-set-2",
+          "position": [
+            3.79,
+            2.7,
+            -6.42
+          ],
+          "screen": [
+            0.5991,
+            0.3203
+          ],
+          "screenMobile": [
+            0.6495,
+            0.4143
+          ]
+        },
+        {
+          "id": "b-set-3",
+          "position": [
+            3.79,
+            2.7,
+            -7.63
+          ],
+          "screen": [
+            0.4348,
+            0.3203
+          ],
+          "screenMobile": [
+            0.4017,
+            0.4143
+          ]
+        },
+        {
+          "id": "b-hanger-4",
+          "position": [
+            3.65,
+            2.48,
+            -8.88
+          ],
+          "screen": [
+            0.2565,
+            0.3667
+          ],
+          "screenMobile": [
+            0.1329,
+            0.4364
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "camera": [
+        0.0,
+        1.75,
+        -8.85
+      ],
+      "target": [
+        0.0,
+        1.2,
+        -12.35
+      ],
+      "fov": 57.0,
+      "fovMobile": 110.0,
+      "still": "assets/stops/C.jpg",
+      "stillMobile": "assets/stops/C-mobile.jpg",
+      "hotspots": [
+        {
+          "id": "c-look-1",
+          "position": [
+            -0.35,
+            1.45,
+            -12.12
+          ],
+          "screen": [
+            0.4447,
+            0.4406
+          ],
+          "screenMobile": [
+            0.4335,
+            0.4774
+          ]
+        },
+        {
+          "id": "c-look-2",
+          "position": [
+            0.55,
+            1.63,
+            -12.47
+          ],
+          "screen": [
+            0.5793,
+            0.3864
+          ],
+          "screenMobile": [
+            0.5952,
+            0.4568
+          ]
+        },
+        {
+          "id": "c-look-3",
+          "position": [
+            1.45,
+            1.4,
+            -12.27
+          ],
+          "screen": [
+            0.7188,
+            0.4503
+          ],
+          "screenMobile": [
+            0.7629,
+            0.4811
+          ]
+        },
+        {
+          "id": "c-case",
+          "position": [
+            -1.55,
+            1.0,
+            -11.34
+          ],
+          "screen": [
+            0.1883,
+            0.6267
+          ],
+          "screenMobile": [
+            0.1255,
+            0.5482
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "camera": [
+        1.25,
+        1.7,
+        -14.15
+      ],
+      "target": [
+        -1.25,
+        1.55,
+        -17.0
+      ],
+      "fov": 62.0,
+      "fovMobile": 100.0,
+      "still": "assets/stops/D.jpg",
+      "stillMobile": "assets/stops/D-mobile.jpg",
+      "hotspots": [
+        {
+          "id": "d-table",
+          "position": [
+            -0.65,
+            0.8,
+            -16.32
+          ],
+          "screen": [
+            0.5004,
+            0.724
+          ],
+          "screenMobile": [
+            0.5007,
+            0.6129
+          ]
+        },
+        {
+          "id": "d-swatches",
+          "position": [
+            -0.65,
+            2.05,
+            -17.945
+          ],
+          "screen": [
+            0.623,
+            0.3958
+          ],
+          "screenMobile": [
+            0.696,
+            0.4475
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "camera": [
+        0.0,
+        1.75,
+        -18.5
+      ],
+      "target": [
+        0.0,
+        1.85,
+        -21.15
+      ],
+      "fov": 64.0,
+      "fovMobile": 100.0,
+      "still": "assets/stops/E.jpg",
+      "stillMobile": "assets/stops/E-mobile.jpg",
+      "hotspots": [
+        {
+          "id": "e-counter",
+          "position": [
+            -0.55,
+            1.1,
+            -20.2
+          ],
+          "screen": [
+            0.3521,
+            0.8411
+          ],
+          "screenMobile": [
+            0.255,
+            0.6788
+          ]
+        },
+        {
+          "id": "e-delivery",
+          "position": [
+            0.66,
+            1.28,
+            -20.368
+          ],
+          "screen": [
+            0.6607,
+            0.7337
+          ],
+          "screenMobile": [
+            0.7662,
+            0.6226
+          ]
+        },
+        {
+          "id": "e-contact",
+          "position": [
+            -0.62,
+            1.28,
+            -20.35
+          ],
+          "screen": [
+            0.3476,
+            0.7357
+          ],
+          "screenMobile": [
+            0.2474,
+            0.6236
+          ]
+        }
+      ]
+    }
+  ]
+}
