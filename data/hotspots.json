@@ -4,50 +4,55 @@
     "action": "stop",
     "target": "B"
   },
-  "a-mannequin": {
+  "a-bust-rouge": {
     "stop": "A",
     "action": "product",
-    "product": "robe-nuisette"
+    "product": "deshabille-rouge"
   },
-  "b-torso-1": {
+  "a-bust-blanc": {
+    "stop": "A",
+    "action": "product",
+    "product": "nuisette-string"
+  },
+  "b-kimono": {
     "stop": "B",
     "action": "product",
-    "product": "body-en-dentelle-raffinee"
+    "product": "kimono-dentelle"
   },
-  "b-set-2": {
+  "b-body": {
     "stop": "B",
     "action": "product",
-    "product": "ensemble-elegance-noire"
+    "product": "body-dentelle"
   },
-  "b-set-3": {
+  "b-ensembles": {
     "stop": "B",
     "action": "product",
-    "product": "ensemble-rouge"
+    "product": "ensembles-dentelle-weyes"
   },
-  "b-hanger-4": {
+  "b-pyjama": {
     "stop": "B",
     "action": "product",
-    "product": "pyjama"
+    "product": "pyjama-satin-tress"
   },
-  "c-look-1": {
+  "c-jaguar": {
     "stop": "C",
     "action": "product",
-    "product": "robe-nuisette"
+    "product": "ensemble-nuisette-kimono-jaguar"
   },
-  "c-look-2": {
+  "c-leopard": {
     "stop": "C",
     "action": "product",
-    "product": "pyjama"
+    "product": "ensemble-leopard"
   },
-  "c-look-3": {
+  "c-deshabille": {
     "stop": "C",
     "action": "product",
-    "product": "ensemble-rouge"
+    "product": "deshabille-elegance"
   },
   "c-case": {
     "stop": "C",
     "action": "product",
-    "product": "ensemble-elegance-noire"
+    "product": "strings-dentelle"
   },
   "d-table": {
     "stop": "D",
@@ -68,5 +73,10 @@
   "e-contact": {
     "stop": "E",
     "action": "contact"
+  },
+  "e-brume": {
+    "stop": "E",
+    "action": "product",
+    "product": "brume-intime-maison-serai"
   }
 }

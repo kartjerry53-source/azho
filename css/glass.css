@@ -428,21 +428,21 @@ body .drawer input[type="number"]::-webkit-inner-spin-button, body .drawer input
   inline-size: calc(26px * 1000 / 253); block-size: 44px; min-height: 44px;
   min-inline-size: calc(26px * 1000 / 253); flex: 0 0 auto;
   background-color: var(--g-ink);
-  -webkit-mask: url('../assets/brand/azho-wordmark.svg?v=20261113n') no-repeat center / contain;
-  mask: url('../assets/brand/azho-wordmark.svg?v=20261113n') no-repeat center / contain;
+  -webkit-mask: url('../assets/brand/azho-wordmark.svg?v=20261113q') no-repeat center / contain;
+  mask: url('../assets/brand/azho-wordmark.svg?v=20261113q') no-repeat center / contain;
 }
 .intro-logo {
   display: block; block-size: 120px; inline-size: calc(120px * 1000 / 734);
   margin: 0 auto 12px; background-color: var(--g-ink);
-  -webkit-mask: url('../assets/brand/azho-logo.svg?v=20261113n') no-repeat center / contain;
-  mask: url('../assets/brand/azho-logo.svg?v=20261113n') no-repeat center / contain;
+  -webkit-mask: url('../assets/brand/azho-logo.svg?v=20261113q') no-repeat center / contain;
+  mask: url('../assets/brand/azho-logo.svg?v=20261113q') no-repeat center / contain;
 }
 .footer-brand { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; }
 .footer-wordmark {
   display: inline-block; flex: none; block-size: 18px; inline-size: calc(18px * 1000 / 253);
   background-color: var(--g-ink);
-  -webkit-mask: url('../assets/brand/azho-wordmark.svg?v=20261113n') no-repeat center / contain;
-  mask: url('../assets/brand/azho-wordmark.svg?v=20261113n') no-repeat center / contain;
+  -webkit-mask: url('../assets/brand/azho-wordmark.svg?v=20261113q') no-repeat center / contain;
+  mask: url('../assets/brand/azho-wordmark.svg?v=20261113q') no-repeat center / contain;
 }
 .footer-maison { font-variant-caps: small-caps; font-size: .75rem; letter-spacing: .12em; }
 @media (max-width: 767px) {
