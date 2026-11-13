@@ -1,6 +1,6 @@
-import { t, formatPrice, escapeHtml, localized, onChange } from "./i18n.js?v=20261113n";
-import { loadProducts, safeStorageGet, safeStorageSet, safeImageUrl, productSizes, isPublished } from "./store.js?v=20261113n";
-import { addLine } from "./cart.js?v=20261113n";
+import { t, formatPrice, escapeHtml, localized, onChange } from "./i18n.js?v=20261113q";
+import { loadProducts, safeStorageGet, safeStorageSet, safeImageUrl, productSizes, isPublished } from "./store.js?v=20261113q";
+import { addLine } from "./cart.js?v=20261113q";
 
 const CONFIG_KEY = "azho.configuration";
 const EMBROIDERY_FEE = 300;

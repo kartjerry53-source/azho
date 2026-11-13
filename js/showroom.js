@@ -1,22 +1,27 @@
-import {createCollections} from './collections.js?v=20261113n';
-import {t,localized,formatPrice,onChange} from './i18n.js?v=20261113n';
-import {loadProducts,loadHotspots,safeStorageGet,safeImageUrl,catalogPrice} from './store.js?v=20261113n';
-import {openProductDialog,openCart,openServiceDialog} from './overlay.js?v=20261113n';
+import {createCollections} from './collections.js?v=20261113q';
+import {t,localized,formatPrice,onChange} from './i18n.js?v=20261113q';
+import {loadProducts,loadHotspots,safeStorageGet,safeImageUrl,catalogPrice} from './store.js?v=20261113q';
+import {openProductDialog,openCart,openServiceDialog} from './overlay.js?v=20261113q';
 
 // Runtime contract bridges old assets without rewriting CGI-owned data.
-const contract={
- 'a-enter':{stop:'A',action:'stop',target:'B'},
- 'a-mannequin':{stop:'A',action:'product',product:'robe-nuisette'},
- 'b-torso-1':{stop:'B',action:'product',product:'body-en-dentelle-raffinee'},
- 'b-set-2':{stop:'B',action:'product',product:'ensemble-elegance-noire'},
- 'b-set-3':{stop:'B',action:'product',product:'ensemble-rouge'},
- 'b-hanger-4':{stop:'B',action:'product',product:'pyjama'},
- 'c-look-1':{stop:'C',action:'product',product:'robe-nuisette'},
- 'c-look-2':{stop:'C',action:'product',product:'pyjama'},
- 'c-look-3':{stop:'C',action:'product',product:'ensemble-rouge'},
- 'c-case':{stop:'C',action:'product',product:'ensemble-elegance-noire'},
- 'd-table':{stop:'D',action:'atelier'},'d-swatches':{stop:'D',action:'atelier'},
- 'e-counter':{stop:'E',action:'cart'},'e-delivery':{stop:'E',action:'delivery'},'e-contact':{stop:'E',action:'contact'}
+const contract={ // generated from data/hotspots.json (cgi/scene_contract.py); regenerate when hotspots change
+  'a-enter':{"stop": "A", "action": "stop", "target": "B"},
+  'a-bust-rouge':{"stop": "A", "action": "product", "product": "deshabille-rouge"},
+  'a-bust-blanc':{"stop": "A", "action": "product", "product": "nuisette-string"},
+  'b-kimono':{"stop": "B", "action": "product", "product": "kimono-dentelle"},
+  'b-body':{"stop": "B", "action": "product", "product": "body-dentelle"},
+  'b-ensembles':{"stop": "B", "action": "product", "product": "ensembles-dentelle-weyes"},
+  'b-pyjama':{"stop": "B", "action": "product", "product": "pyjama-satin-tress"},
+  'c-jaguar':{"stop": "C", "action": "product", "product": "ensemble-nuisette-kimono-jaguar"},
+  'c-leopard':{"stop": "C", "action": "product", "product": "ensemble-leopard"},
+  'c-deshabille':{"stop": "C", "action": "product", "product": "deshabille-elegance"},
+  'c-case':{"stop": "C", "action": "product", "product": "strings-dentelle"},
+  'd-table':{"stop": "D", "action": "atelier"},
+  'd-swatches':{"stop": "D", "action": "atelier"},
+  'e-counter':{"stop": "E", "action": "cart"},
+  'e-delivery':{"stop": "E", "action": "delivery"},
+  'e-contact':{"stop": "E", "action": "contact"},
+  'e-brume':{"stop": "E", "action": "product", "product": "brume-intime-maison-serai"}
 };
 const legacy={A:['a-enter'],B:['b-rail-1','b-rail-2','b-rail-3'],C:['c-island-1','c-rail-1'],D:['d-atelier'],E:['e-counter']};
 const groups='ABCDE'.split('').map(stop=>[stop,...Object.keys(contract).filter(id=>contract[id].stop===stop)]);
@@ -61,7 +66,7 @@ function fallbackStops() {
 }
 async function fetchStops() {
   try{
-    const res=await fetch('assets/stops.json?v=20261113n',{cache:'no-cache'});
+    const res=await fetch('assets/stops.json?v=20261113q',{cache:'no-cache'});
     if(!res.ok)return fallbackStops();
     const data=await res.json();
     return groups.map(([id,...ids])=>{
@@ -189,7 +194,7 @@ async function loadScene() {
   };
   if(!state.stops.every(s=>Array.isArray(s.camera)&&Array.isArray(s.target))){fail();return;}
   try{
-    const {createScene}=await import('./three-scene.js?v=20261113n');
+    const {createScene}=await import('./three-scene.js?v=20261113q');
     if(generation!==sceneGeneration)return;
     scene=createScene({canvas:els.canvas,onProgress:({loaded,total})=>{
       if(generation!==sceneGeneration || !Number.isFinite(loaded) || loaded<0)return;
@@ -208,7 +213,7 @@ async function loadScene() {
         if(p){b.style.left=p.x*100+'%';b.style.top=p.y*100+'%';}}
     },onRest:rest=>{if(generation!==sceneGeneration)return;state.rest=rest;if(!rest)for(const b of els.hotspots.children)b.hidden=true;},onError:fail});
     state.scene=scene;
-    await scene.load('assets/boutique.glb?v=20261113n');
+    await scene.load('assets/boutique.glb?v=20261113q');
     if(generation!==sceneGeneration){scene.dispose();return;}
     scene.setStop(current(),{instant:true});scene.setActive(true);
   }catch(error){fail(error);}
@@ -220,7 +225,7 @@ async function enter() {
   if(els.showroom)els.showroom.hidden=false;
   // Warm the 3D module graph on the landing showroom.
   if(document.body.dataset.page==='home' || /(?:^|\/)index\.html$/.test(location.pathname || '') || document.getElementById('intro')){
-    for(const href of ['vendor/three/build/three.module.min.js?v=20261113n','vendor/three/examples/jsm/loaders/GLTFLoader.js?v=20261113n']){
+    for(const href of ['vendor/three/build/three.module.min.js?v=20261113q','vendor/three/examples/jsm/loaders/GLTFLoader.js?v=20261113q']){
       const link=document.createElement('link');link.rel='modulepreload';link.href=href;document.head.append(link);
     }
   }

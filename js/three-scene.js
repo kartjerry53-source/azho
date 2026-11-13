@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { GLTFLoader } from '../vendor/three/examples/jsm/loaders/GLTFLoader.js?v=20261113n';
+import { GLTFLoader } from '../vendor/three/examples/jsm/loaders/GLTFLoader.js?v=20261113q';
 
 // No light rig: the independent CGI asset contains baked lighting.
 export function createScene({canvas, onProject, onRest, onError, onFirstFrame, onSuspend, onProgress}) {

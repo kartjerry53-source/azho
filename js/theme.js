@@ -1,4 +1,4 @@
-import { t, onChange } from './i18n.js?v=20261113n';
+import { t, onChange } from './i18n.js?v=20261113q';
 
 export function initTheme() {
   const root = document.documentElement;

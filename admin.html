@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-Rm4HPBn3u7Oqj2rcqxjp0mptV1jX1u1FNY1wJ0DwYTs='; connect-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F3E9D8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1B1815" media="(prefers-color-scheme: dark)">
+<script>
+(()=>{let t;try{t=localStorage.getItem('azho.theme')}catch(_){}document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="meta.adminTitle">AZHO — Administration</title>
+<meta name="description" content="Administration AZHO." data-i18n-attr="content:meta.adminDescription">
+<meta property="og:title" content="AZHO — Administration" data-i18n-attr="content:meta.adminTitle">
+<meta property="og:description" content="Administration AZHO." data-i18n-attr="content:meta.adminDescription">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/stops/A.jpg">
+<link rel="preload" href="vendor/fonts/cormorant-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="vendor/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/tokens.css?v=20261113q">
+<link rel="stylesheet" href="css/style.css?v=20261113q">
+<link rel="stylesheet" href="css/home.css?v=20261113q">
+<link rel="stylesheet" href="css/pages.css?v=20261113q">
+<link rel="stylesheet" href="css/refinements.css?v=20261113q">
+<link rel="stylesheet" href="css/glass.css?v=20261113q">
+<link rel="stylesheet" href="css/collections.css?v=20261113q">
+<link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg?v=20261113q">
+</head>
+<body data-page="admin">
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Aller au contenu</a>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="AZHO — accueil" data-i18n-attr="aria-label:nav.home"><span class="visually-hidden" data-i18n="nav.home">AZHO — accueil</span></a>
+    <nav id="primary-nav" class="primary-nav" data-i18n-attr="aria-label:nav.primaryLabel">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.showroom">Boutique 3D</a></li>
+        <li><a href="shop.html" data-i18n="nav.shop">Shop</a></li>
+        <li><a href="shop.html#collections" data-i18n="nav.collections">Collections</a></li>
+        <li><a href="atelier.html" data-i18n="nav.atelier">Atelier</a></li>
+      </ul>
+      <div class="lang-switch menu-languages" role="group" data-i18n-attr="aria-label:nav.language">
+        <button type="button" data-lang="fr" lang="fr" aria-pressed="true" data-i18n="langCode.fr" data-i18n-attr="aria-label:lang.fr">FR</button>
+        <button type="button" data-lang="ar" lang="ar" aria-pressed="false" data-i18n="langCode.ar" data-i18n-attr="aria-label:lang.ar">AR</button>
+        <button type="button" data-lang="en" lang="en" aria-pressed="false" data-i18n="langCode.en" data-i18n-attr="aria-label:lang.en">EN</button>
+      </div>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" data-i18n-attr="aria-label:nav.language">
+        <button type="button" data-lang="fr" lang="fr" aria-pressed="true" data-i18n="langCode.fr" data-i18n-attr="aria-label:lang.fr">FR</button>
+        <button type="button" data-lang="ar" lang="ar" aria-pressed="false" data-i18n="langCode.ar" data-i18n-attr="aria-label:lang.ar">AR</button>
+        <button type="button" data-lang="en" lang="en" aria-pressed="false" data-i18n="langCode.en" data-i18n-attr="aria-label:lang.en">EN</button>
+      </div>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Mode sombre" title="Mode sombre">
+        <svg class="theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M20 15.5A9 9 0 0 1 8.5 4 9 9 0 1 0 20 15.5Z"/></svg>
+        <svg class="theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+      </button>
+      <button type="button" class="icon-btn" id="wishlist-btn" aria-haspopup="dialog">
+        <span data-i18n="nav.wishlist">Favoris</span>
+        <span class="count" id="wishlist-count" aria-live="polite">0</span>
+      </button>
+      <button type="button" class="icon-btn" id="cart-btn" aria-haspopup="dialog">
+        <span data-i18n="nav.cart">Panier</span>
+        <span class="count" id="cart-count" aria-live="polite">0</span>
+      </button>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-controls="primary-nav" aria-expanded="false" data-i18n-attr="aria-label:nav.menu"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="admin" aria-labelledby="admin-title">
+    <h1 id="admin-title" data-i18n="admin.title">Administration</h1>
+    <p class="admin-note" data-i18n="admin.mockNote">Maquette — aucune donnée réelle</p>
+    <div class="admin-layout">
+      <nav class="admin-sidebar" data-i18n-attr="aria-label:admin.title">
+        <ul id="admin-nav"></ul>
+      </nav>
+      <div class="admin-content" id="admin-content"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-brand" dir="ltr"><span class="footer-wordmark"><span class="visually-hidden">AZHO</span></span> <span class="footer-maison">MAISON</span></p>
+    <address><span data-i18n="footer.contact">Contact</span><a href="tel:+213551210696" dir="ltr" data-i18n="footer.phone">+213 551 21 06 96</a><a href="mailto:azholingerie@gmail.com" data-i18n="footer.email">azholingerie@gmail.com</a><span data-i18n="footer.address">Alger</span></address>
+    <p class="footer-demo" data-i18n="footer.demo">Aperçu statique de démonstration.</p>
+  </div>
+</footer>
+
+<div class="demo-ribbon" role="status" data-i18n="ribbon.demo">Aperçu — données de démonstration</div>
+
+<dialog id="cart-dialog" class="drawer" aria-labelledby="cart-title">
+  <div class="drawer-head">
+    <h2 id="cart-title" data-i18n="cart.title">Panier</h2>
+    <button type="button" class="drawer-close" data-close data-i18n="common.close">Fermer</button>
+  </div>
+  <div class="drawer-body" id="cart-body"></div>
+</dialog>
+
+<dialog id="wishlist-dialog" class="drawer" aria-labelledby="wishlist-title">
+  <div class="drawer-head">
+    <h2 id="wishlist-title" data-i18n="wishlist.title">Favoris</h2>
+    <button type="button" class="drawer-close" data-close data-i18n="common.close">Fermer</button>
+  </div>
+  <div class="drawer-body" id="wishlist-body"></div>
+</dialog>
+
+<dialog id="product-dialog" class="drawer drawer-wide" aria-labelledby="product-dialog-title">
+  <div class="drawer-head">
+    <h2 id="product-dialog-title" data-i18n="product.quickView">Aperçu produit</h2>
+    <button type="button" class="drawer-close" data-close data-i18n="common.close">Fermer</button>
+  </div>
+  <div class="drawer-body" id="product-dialog-body"></div>
+</dialog>
+
+<dialog id="admin-edit-dialog" class="drawer drawer-wide" aria-labelledby="admin-edit-title">
+  <div class="drawer-head">
+    <h2 id="admin-edit-title" data-i18n="admin.edit">Modifier</h2>
+    <button type="button" class="drawer-close" data-close data-i18n="common.close">Fermer</button>
+  </div>
+  <div class="drawer-body" id="admin-edit-body"></div>
+</dialog>
+
+<noscript>
+  <p class="noscript"><a href="shop.html" data-i18n="noscript.link">Voir la boutique</a></p>
+</noscript>
+
+<script type="module" src="js/app.js?v=20261113q"></script>
+</body>
+</html>

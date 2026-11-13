@@ -1,9 +1,9 @@
-import { t, escapeHtml, localized, formatPrice, onChange } from "./i18n.js?v=20261113n";
+import { t, escapeHtml, localized, formatPrice, onChange } from "./i18n.js?v=20261113q";
 import {
   initCart, renderCart, renderWishlist,
   addLine, toggleWishlist, isWished, onCartChange, updateCounts
-} from "./cart.js?v=20261113n";
-import { loadProducts, normalizeQty, safeImageUrl, productSizes, catalogPrice, isPurchasable } from "./store.js?v=20261113n";
+} from "./cart.js?v=20261113q";
+import { loadProducts, normalizeQty, safeImageUrl, productSizes, catalogPrice, isPurchasable } from "./store.js?v=20261113q";
 
 /* ---------- Shared image fallback (no inline onerror) ---------- */
 

@@ -1,5 +1,5 @@
-import { t, formatPrice, escapeHtml, localized, getLang } from "./i18n.js?v=20261113n";
-import { safeStorageGet, safeStorageSet, loadWilayas, loadProducts, getLoadedProducts, normalizeQty, productSizes, catalogPrice, isPublished, isPurchasable, safeImageUrl, hasLoadedCatalog } from "./store.js?v=20261113n";
+import { t, formatPrice, escapeHtml, localized, getLang } from "./i18n.js?v=20261113q";
+import { safeStorageGet, safeStorageSet, loadWilayas, loadProducts, getLoadedProducts, normalizeQty, productSizes, catalogPrice, isPublished, isPurchasable, safeImageUrl, hasLoadedCatalog } from "./store.js?v=20261113q";
 
 const CART_KEY = "azho.cart";
 const WISH_KEY = "azho.wishlist";

@@ -1,7 +1,7 @@
-import { openProductDialog } from "./overlay.js?v=20261113n";
-import { t, formatPrice, escapeHtml, localized, onChange } from "./i18n.js?v=20261113n";
-import { getProduct, getRelated, normalizeQty, safeImageUrl, productSizes, catalogPrice, isPurchasable } from "./store.js?v=20261113n";
-import { addLine, isWished, toggleWishlist } from "./cart.js?v=20261113n";
+import { openProductDialog } from "./overlay.js?v=20261113q";
+import { t, formatPrice, escapeHtml, localized, onChange } from "./i18n.js?v=20261113q";
+import { getProduct, getRelated, normalizeQty, safeImageUrl, productSizes, catalogPrice, isPurchasable } from "./store.js?v=20261113q";
+import { addLine, isWished, toggleWishlist } from "./cart.js?v=20261113q";
 
 
 function imgFallback(img) {
