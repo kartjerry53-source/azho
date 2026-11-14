@@ -242,6 +242,6 @@ intro uses the supplied full lockup. Artwork follows espresso/ivory theme ink.
 The mark-only SVG favicon uses champagne brass on transparent, with a centred
 square viewBox. No Apple touch PNG was produced under the no-tools condition.
 Existing Open Graph photography is retained; no dedicated social image exists.
-Current cache generation: `20261113q`. All inline-script CSP hashes were refreshed.
+Current cache generation: `20261113v`. All inline-script CSP hashes were refreshed.
 Logo size, masking, responsive/RTL layout and browser CSP enforcement need visual
 verification; no browser was used for this identity update.

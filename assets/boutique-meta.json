@@ -83,42 +83,42 @@
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-elegance-noire_017",
+      "name": "GARMENT_rack-red_017",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-elegance-noire_018",
+      "name": "GARMENT_rack-paper_018",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-elegance-noire_019",
+      "name": "GARMENT_rack-black_019",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-elegance-noire_020",
+      "name": "GARMENT_rack-blush_020",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-elegance-noire_021",
+      "name": "GARMENT_rack-red_021",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-elegance-noire_022",
+      "name": "GARMENT_rack-paper_022",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-elegance-noire_023",
+      "name": "GARMENT_rack-blush_023",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-elegance-noire_024",
+      "name": "GARMENT_rack-black_024",
       "zone": "B",
       "azho_placeholder": true
     },
@@ -208,407 +208,1162 @@
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_kimono-dentelle_042",
+      "name": "GARMENT_ensemble-elegance-noire_042",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_kimono-dentelle_043",
+      "name": "GARMENT_ensemble-elegance-noire_043",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_kimono-dentelle_044",
+      "name": "GARMENT_ensemble-elegance-noire_044",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_kimono-dentelle_045",
+      "name": "GARMENT_ensemble-elegance-noire_045",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_kimono-dentelle_046",
+      "name": "GARMENT_ensemble-elegance-noire_046",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_kimono-dentelle_047",
+      "name": "GARMENT_ensemble-elegance-noire_047",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_kimono-dentelle_048",
+      "name": "GARMENT_ensemble-elegance-noire_048",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_049",
+      "name": "GARMENT_ensemble-elegance-noire_049",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_050",
+      "name": "GARMENT_kimono-dentelle_050",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_051",
+      "name": "GARMENT_kimono-dentelle_051",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_052",
+      "name": "GARMENT_kimono-dentelle_052",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_053",
+      "name": "GARMENT_kimono-dentelle_053",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_054",
+      "name": "GARMENT_kimono-dentelle_054",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_055",
+      "name": "GARMENT_kimono-dentelle_055",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_056",
+      "name": "GARMENT_kimono-dentelle_056",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_057",
+      "name": "GARMENT_deshabille-noir_057",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_058",
+      "name": "GARMENT_deshabille-noir_058",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_059",
+      "name": "GARMENT_deshabille-noir_059",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_060",
+      "name": "GARMENT_deshabille-noir_060",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_061",
+      "name": "GARMENT_deshabille-noir_061",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_062",
+      "name": "GARMENT_deshabille-noir_062",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_063",
+      "name": "GARMENT_deshabille-noir_063",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_064",
+      "name": "GARMENT_ensemble-nuisette-kimono-jaguar_064",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_065",
+      "name": "GARMENT_ensemble-nuisette-kimono-jaguar_065",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_066",
+      "name": "GARMENT_ensemble-nuisette-kimono-jaguar_066",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_067",
+      "name": "GARMENT_ensemble-nuisette-kimono-jaguar_067",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_068",
+      "name": "GARMENT_ensemble-nuisette-kimono-jaguar_068",
       "zone": "B",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensembles-dentelle-weyes_069",
-      "zone": "B",
-      "azho_placeholder": true
-    },
-    {
-      "name": "GARMENT_body-dentelle_070",
-      "zone": "B",
-      "azho_placeholder": true
-    },
-    {
-      "name": "GARMENT_body-dentelle_071",
-      "zone": "B",
-      "azho_placeholder": true
-    },
-    {
-      "name": "GARMENT_body-dentelle_072",
-      "zone": "B",
-      "azho_placeholder": true
-    },
-    {
-      "name": "GARMENT_pyjama-satin-tress_073",
-      "zone": "B",
-      "azho_placeholder": true
-    },
-    {
-      "name": "GARMENT_pyjama-satin-tress_074",
-      "zone": "B",
-      "azho_placeholder": true
-    },
-    {
-      "name": "GARMENT_pyjama-satin-tress_075",
-      "zone": "B",
-      "azho_placeholder": true
-    },
-    {
-      "name": "GARMENT_pyjama-satin-tress_076",
-      "zone": "B",
-      "azho_placeholder": true
-    },
-    {
-      "name": "GARMENT_pyjama-satin-tress_077",
-      "zone": "B",
-      "azho_placeholder": true
-    },
-    {
-      "name": "GARMENT_pyjama-satin-tress_078",
-      "zone": "B",
-      "azho_placeholder": true
-    },
-    {
-      "name": "GARMENT_pyjama-satin-tress_079",
-      "zone": "B",
-      "azho_placeholder": true
-    },
-    {
-      "name": "GARMENT_pyjama-satin-tress_080",
-      "zone": "B",
-      "azho_placeholder": true
-    },
-    {
-      "name": "GARMENT_pyjama-satin-tress_081",
-      "zone": "B",
-      "azho_placeholder": true
-    },
-    {
-      "name": "GARMENT_pyjama-satin-tress_082",
-      "zone": "B",
-      "azho_placeholder": true
-    },
-    {
-      "name": "GARMENT_pyjama-satin-tress_083",
-      "zone": "B",
-      "azho_placeholder": true
-    },
-    {
-      "name": "GARMENT_pyjama-satin-tress_084",
-      "zone": "B",
-      "azho_placeholder": true
-    },
-    {
-      "name": "GARMENT_ensemble-nuisette-kimono-jaguar_085",
+      "name": "GARMENT_ensemble-nuisette-kimono-jaguar_069",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-nuisette-kimono-jaguar_086",
+      "name": "GARMENT_ensemble-nuisette-kimono-jaguar_070",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-nuisette-kimono-jaguar_087",
+      "name": "GARMENT_ensemble-nuisette-kimono-jaguar_071",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-nuisette-kimono-jaguar_088",
+      "name": "GARMENT_ensemble-nuisette-kimono-jaguar_072",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-nuisette-kimono-jaguar_089",
+      "name": "GARMENT_ensemble-nuisette-kimono-jaguar_073",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_deshabille-elegance_090",
+      "name": "GARMENT_deshabille-elegance_074",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_deshabille-elegance_091",
+      "name": "GARMENT_deshabille-elegance_075",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_deshabille-elegance_092",
+      "name": "GARMENT_deshabille-elegance_076",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-leopard_093",
+      "name": "GARMENT_ensemble-leopard_077",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-leopard_094",
+      "name": "GARMENT_ensemble-leopard_078",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-leopard_095",
+      "name": "GARMENT_ensemble-leopard_079",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-leopard_096",
+      "name": "GARMENT_ensemble-leopard_080",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-leopard_097",
+      "name": "GARMENT_ensemble-leopard_081",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-leopard_098",
+      "name": "GARMENT_ensemble-leopard_082",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-leopard_099",
+      "name": "GARMENT_ensemble-leopard_083",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-leopard_100",
+      "name": "GARMENT_ensemble-leopard_084",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-leopard_101",
+      "name": "GARMENT_ensemble-leopard_085",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_ensemble-leopard_102",
+      "name": "GARMENT_ensemble-leopard_086",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_rack-red_103",
+      "name": "GARMENT_rack-red_087",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_rack-paper_104",
+      "name": "GARMENT_rack-paper_088",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_rack-black_105",
+      "name": "GARMENT_rack-black_089",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_rack-red_106",
+      "name": "GARMENT_rack-red_090",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_rack-paper_107",
+      "name": "GARMENT_rack-paper_091",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_rack-black_108",
+      "name": "GARMENT_rack-black_092",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_rack-red_109",
+      "name": "GARMENT_rack-red_093",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_rack-paper_110",
+      "name": "GARMENT_rack-paper_094",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_rack-black_111",
+      "name": "GARMENT_rack-black_095",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_rack-red_112",
+      "name": "GARMENT_rack-red_096",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_rack-paper_113",
+      "name": "GARMENT_rack-paper_097",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_rack-black_114",
+      "name": "GARMENT_rack-black_098",
       "zone": "C",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_rack-red_115",
+      "name": "GARMENT_ensembles-dentelle-weyes_099",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensembles-dentelle-weyes_100",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensembles-dentelle-weyes_101",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensembles-dentelle-weyes_102",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensembles-dentelle-weyes_103",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensembles-dentelle-weyes_104",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensembles-dentelle-weyes_105",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensembles-dentelle-weyes_106",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensembles-dentelle-weyes_107",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensembles-dentelle-weyes_108",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensembles-dentelle-weyes_109",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensembles-dentelle-weyes_110",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensembles-dentelle-weyes_111",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensembles-dentelle-weyes_112",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensembles-dentelle-weyes_113",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensembles-dentelle-weyes_114",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensembles-dentelle-weyes_115",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensembles-dentelle-weyes_116",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensembles-dentelle-weyes_117",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensembles-dentelle-weyes_118",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensembles-dentelle-weyes_119",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_body-dentelle_120",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_body-dentelle_121",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_body-dentelle_122",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-trois-pieces-dentelle_123",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-trois-pieces-dentelle_124",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-trois-pieces-dentelle_125",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-trois-pieces-dentelle_126",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-trois-pieces-dentelle_127",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-trois-pieces-dentelle_128",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_129",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_130",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_131",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_132",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_133",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_134",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_135",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_136",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_137",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_138",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_139",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_140",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_141",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_142",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_143",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_144",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_145",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_146",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_147",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_148",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_149",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_150",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_151",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_152",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_153",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_154",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_155",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_156",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_157",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_ensemble-elegance-noire_158",
+      "zone": "F",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_159",
       "zone": "E",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_rack-paper_116",
+      "name": "GARMENT_pyjama-tress_160",
       "zone": "E",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_rack-black_117",
+      "name": "GARMENT_pyjama-tress_161",
       "zone": "E",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_rack-blush_118",
+      "name": "GARMENT_pyjama-tress_162",
       "zone": "E",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_rack-red_119",
+      "name": "GARMENT_pyjama-tress_163",
       "zone": "E",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_rack-paper_120",
+      "name": "GARMENT_pyjama-tress_164",
       "zone": "E",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_rack-black_121",
+      "name": "GARMENT_pyjama-tress_165",
       "zone": "E",
       "azho_placeholder": true
     },
     {
-      "name": "GARMENT_rack-blush_122",
+      "name": "GARMENT_pyjama-tress_166",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_167",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_168",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_169",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_170",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_171",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_172",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_173",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_174",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_175",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_176",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_177",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_178",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_179",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_180",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_181",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_182",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_183",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_184",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_185",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_186",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_187",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_188",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_189",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_190",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_191",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_192",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-tress_193",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_194",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_195",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_196",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_197",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_198",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_199",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_200",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_201",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_202",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_203",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_204",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_205",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_206",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_207",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_208",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_209",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_210",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_211",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_212",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_213",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_214",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_215",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_216",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_217",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_218",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_219",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_220",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_221",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_222",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-tress_223",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-leopard_224",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-leopard_225",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-leopard_226",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-leopard_227",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-leopard_228",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-leopard_229",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-leopard_230",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-leopard_231",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-leopard_232",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-leopard_233",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-leopard_234",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-leopard_235",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-leopard_236",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-leopard_237",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-leopard_238",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-leopard_239",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-leopard_240",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-leopard_241",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-leopard_242",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-satin-leopard_243",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_244",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_245",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_246",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_247",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_248",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_249",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_250",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_251",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_252",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_253",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_254",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_255",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_256",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_257",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_258",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_259",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_260",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_261",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_262",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_263",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_264",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_265",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_266",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_267",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_268",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_269",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_270",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_271",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_272",
+      "zone": "E",
+      "azho_placeholder": true
+    },
+    {
+      "name": "GARMENT_pyjama-coton-boutonne_273",
       "zone": "E",
       "azho_placeholder": true
     }
@@ -621,9 +1376,8 @@
     ],
     "B": [
       "b-kimono",
-      "b-body",
-      "b-ensembles",
-      "b-pyjama"
+      "b-deshabille-noir",
+      "b-ensemble-jaguar"
     ],
     "C": [
       "c-jaguar",
@@ -631,15 +1385,29 @@
       "c-deshabille",
       "c-case"
     ],
+    "F": [
+      "f-ensembles",
+      "f-body",
+      "f-trois-pieces",
+      "f-strings"
+    ],
+    "E": [
+      "e-tress",
+      "e-satin-tress",
+      "e-leopard",
+      "e-coton",
+      "e-primark",
+      "e-cadeaux"
+    ],
     "D": [
       "d-table",
       "d-swatches"
     ],
-    "E": [
-      "e-counter",
-      "e-delivery",
-      "e-contact",
-      "e-brume"
+    "G": [
+      "g-counter",
+      "g-delivery",
+      "g-contact",
+      "g-brume"
     ]
   }
 }

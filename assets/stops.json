@@ -102,51 +102,35 @@
           ]
         },
         {
-          "id": "b-body",
+          "id": "b-deshabille-noir",
           "position": [
-            4.18,
-            1.75,
-            -8.25
+            3.55,
+            1.2,
+            -7.85
           ],
           "screen": [
-            0.3613,
-            0.551
+            0.3972,
+            0.693
           ],
           "screenMobile": [
-            0.2908,
-            0.5243
+            0.345,
+            0.5921
           ]
         },
         {
-          "id": "b-ensembles",
+          "id": "b-ensemble-jaguar",
           "position": [
-            4.18,
-            1.3,
-            -7.2
+            3.55,
+            1.2,
+            -8.75
           ],
           "screen": [
-            0.4937,
-            0.6526
+            0.2649,
+            0.693
           ],
           "screenMobile": [
-            0.4904,
-            0.5728
-          ]
-        },
-        {
-          "id": "b-pyjama",
-          "position": [
-            4.0,
-            1.5,
-            -9.05
-          ],
-          "screen": [
-            0.2499,
-            0.6091
-          ],
-          "screenMobile": [
-            0.123,
-            0.552
+            0.1456,
+            0.5921
           ]
         }
       ]
@@ -235,6 +219,204 @@
       ]
     },
     {
+      "id": "F",
+      "camera": [
+        -0.6,
+        1.7,
+        -15.55
+      ],
+      "target": [
+        4.3,
+        1.75,
+        -15.55
+      ],
+      "fov": 54.0,
+      "fovMobile": 92.0,
+      "still": "assets/stops/F.jpg",
+      "stillMobile": "assets/stops/F-mobile.jpg",
+      "hotspots": [
+        {
+          "id": "f-ensembles",
+          "position": [
+            4.18,
+            1.3,
+            -14.1
+          ],
+          "screen": [
+            0.6676,
+            0.5922
+          ],
+          "screenMobile": [
+            0.7606,
+            0.5454
+          ]
+        },
+        {
+          "id": "f-body",
+          "position": [
+            4.18,
+            1.75,
+            -15.4
+          ],
+          "screen": [
+            0.5173,
+            0.4997
+          ],
+          "screenMobile": [
+            0.5269,
+            0.4999
+          ]
+        },
+        {
+          "id": "f-trois-pieces",
+          "position": [
+            3.75,
+            1.2,
+            -16.55
+          ],
+          "screen": [
+            0.373,
+            0.623
+          ],
+          "screenMobile": [
+            0.3024,
+            0.5605
+          ]
+        },
+        {
+          "id": "f-strings",
+          "position": [
+            4.1,
+            1.2,
+            -17.35
+          ],
+          "screen": [
+            0.2884,
+            0.6145
+          ],
+          "screenMobile": [
+            0.1709,
+            0.5564
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "camera": [
+        0.2,
+        1.7,
+        -16.9
+      ],
+      "target": [
+        0.2,
+        1.35,
+        -21.25
+      ],
+      "fov": 62.0,
+      "fovMobile": 112.0,
+      "still": "assets/stops/E.jpg",
+      "stillMobile": "assets/stops/E-mobile.jpg",
+      "hotspots": [
+        {
+          "id": "e-tress",
+          "position": [
+            -2.2,
+            1.3,
+            -21.05
+          ],
+          "screen": [
+            0.2305,
+            0.5132
+          ],
+          "screenMobile": [
+            0.1548,
+            0.5053
+          ]
+        },
+        {
+          "id": "e-satin-tress",
+          "position": [
+            -0.95,
+            1.3,
+            -21.05
+          ],
+          "screen": [
+            0.3709,
+            0.5132
+          ],
+          "screenMobile": [
+            0.3346,
+            0.5053
+          ]
+        },
+        {
+          "id": "e-leopard",
+          "position": [
+            -0.55,
+            1.3,
+            -21.05
+          ],
+          "screen": [
+            0.4158,
+            0.5132
+          ],
+          "screenMobile": [
+            0.3921,
+            0.5053
+          ]
+        },
+        {
+          "id": "e-coton",
+          "position": [
+            0.75,
+            1.3,
+            -21.05
+          ],
+          "screen": [
+            0.5618,
+            0.5132
+          ],
+          "screenMobile": [
+            0.5791,
+            0.5053
+          ]
+        },
+        {
+          "id": "e-primark",
+          "position": [
+            2.35,
+            0.3,
+            -21.3
+          ],
+          "screen": [
+            0.7237,
+            0.6929
+          ],
+          "screenMobile": [
+            0.7866,
+            0.5782
+          ]
+        },
+        {
+          "id": "e-cadeaux",
+          "position": [
+            2.35,
+            0.95,
+            -20.55
+          ],
+          "screen": [
+            0.7721,
+            0.6023
+          ],
+          "screenMobile": [
+            0.8485,
+            0.5415
+          ]
+        }
+      ]
+    },
+    {
       "id": "D",
       "camera": [
         1.0,
@@ -286,84 +468,84 @@
       ]
     },
     {
-      "id": "E",
+      "id": "G",
       "camera": [
-        0.35,
+        0.6,
         1.7,
-        -17.9
+        -7.15
       ],
       "target": [
-        0.0,
-        1.45,
-        -21.25
+        -4.05,
+        1.8,
+        -7.15
       ],
-      "fov": 62.0,
-      "fovMobile": 96.0,
-      "still": "assets/stops/E.jpg",
-      "stillMobile": "assets/stops/E-mobile.jpg",
+      "fov": 54.0,
+      "fovMobile": 92.0,
+      "still": "assets/stops/G.jpg",
+      "stillMobile": "assets/stops/G-mobile.jpg",
       "hotspots": [
         {
-          "id": "e-counter",
+          "id": "g-counter",
           "position": [
-            -0.55,
+            -2.95,
             1.1,
-            -20.2
+            -7.65
           ],
           "screen": [
-            0.373,
-            0.6452
+            0.578,
+            0.6876
           ],
           "screenMobile": [
-            0.2829,
-            0.5786
+            0.6214,
+            0.5923
           ]
         },
         {
-          "id": "e-delivery",
+          "id": "g-delivery",
           "position": [
-            0.92,
+            -3.41,
             1.2,
-            -20.36
+            -8.49
           ],
           "screen": [
-            0.6592,
-            0.6108
+            0.685,
+            0.6438
           ],
           "screenMobile": [
-            0.7723,
-            0.5599
+            0.7877,
+            0.5708
           ]
         },
         {
-          "id": "e-contact",
+          "id": "g-contact",
           "position": [
-            1.18,
+            -3.41,
             1.2,
-            -20.36
+            -8.72
           ],
           "screen": [
-            0.7117,
-            0.6127
+            0.7167,
+            0.6438
           ],
           "screenMobile": [
-            0.8619,
-            0.561
+            0.8371,
+            0.5708
           ]
         },
         {
-          "id": "e-brume",
+          "id": "g-brume",
           "position": [
-            0.17,
+            -3.23,
             1.24,
-            -20.42
+            -6.87
           ],
           "screen": [
-            0.5152,
-            0.5886
+            0.4595,
+            0.6393
           ],
           "screenMobile": [
-            0.526,
-            0.548
+            0.4371,
+            0.5686
           ]
         }
       ]

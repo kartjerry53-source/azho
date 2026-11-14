@@ -19,20 +19,15 @@
     "action": "product",
     "product": "kimono-dentelle"
   },
-  "b-body": {
+  "b-deshabille-noir": {
     "stop": "B",
     "action": "product",
-    "product": "body-dentelle"
+    "product": "deshabille-noir"
   },
-  "b-ensembles": {
+  "b-ensemble-jaguar": {
     "stop": "B",
     "action": "product",
-    "product": "ensembles-dentelle-weyes"
-  },
-  "b-pyjama": {
-    "stop": "B",
-    "action": "product",
-    "product": "pyjama-satin-tress"
+    "product": "ensemble-nuisette-kimono-jaguar"
   },
   "c-jaguar": {
     "stop": "C",
@@ -54,6 +49,26 @@
     "action": "product",
     "product": "strings-dentelle"
   },
+  "f-ensembles": {
+    "stop": "F",
+    "action": "product",
+    "product": "ensembles-dentelle-weyes"
+  },
+  "f-body": {
+    "stop": "F",
+    "action": "product",
+    "product": "body-dentelle"
+  },
+  "f-trois-pieces": {
+    "stop": "F",
+    "action": "product",
+    "product": "ensemble-trois-pieces-dentelle"
+  },
+  "f-strings": {
+    "stop": "F",
+    "action": "product",
+    "product": "strings-dentelle"
+  },
   "d-table": {
     "stop": "D",
     "action": "atelier"
@@ -62,20 +77,50 @@
     "stop": "D",
     "action": "atelier"
   },
-  "e-counter": {
+  "e-tress": {
     "stop": "E",
+    "action": "product",
+    "product": "pyjama-tress"
+  },
+  "e-satin-tress": {
+    "stop": "E",
+    "action": "product",
+    "product": "pyjama-satin-tress"
+  },
+  "e-leopard": {
+    "stop": "E",
+    "action": "product",
+    "product": "pyjama-satin-leopard"
+  },
+  "e-coton": {
+    "stop": "E",
+    "action": "product",
+    "product": "pyjama-coton-boutonne"
+  },
+  "e-primark": {
+    "stop": "E",
+    "action": "product",
+    "product": "pyjama-primark"
+  },
+  "e-cadeaux": {
+    "stop": "E",
+    "action": "product",
+    "product": "coffrets-cadeaux"
+  },
+  "g-counter": {
+    "stop": "G",
     "action": "cart"
   },
-  "e-delivery": {
-    "stop": "E",
+  "g-delivery": {
+    "stop": "G",
     "action": "delivery"
   },
-  "e-contact": {
-    "stop": "E",
+  "g-contact": {
+    "stop": "G",
     "action": "contact"
   },
-  "e-brume": {
-    "stop": "E",
+  "g-brume": {
+    "stop": "G",
     "action": "product",
     "product": "brume-intime-maison-serai"
   }
