@@ -1,7 +1,7 @@
 const LANGS = ["fr", "ar", "en"];
 const RTL = new Set(["ar"]);
 const STORAGE_KEY = "azho.lang";
-const DICT_URL = (lang) => new URL(`../i18n/${lang}.json?v=20261113q`, import.meta.url).href;
+const DICT_URL = (lang) => new URL(`../i18n/${lang}.json?v=20261113v`, import.meta.url).href;
 
 let current = "fr";
 let dicts = { fr: {}, ar: {}, en: {} };

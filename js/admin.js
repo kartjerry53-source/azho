@@ -1,5 +1,5 @@
-import { t, formatPrice, escapeHtml, localized, onChange } from "./i18n.js?v=20261113q";
-import { loadProducts, loadHotspots, safeStorageGet, safeStorageSet, safeImageUrl } from "./store.js?v=20261113q";
+import { t, formatPrice, escapeHtml, localized, onChange } from "./i18n.js?v=20261113v";
+import { loadProducts, loadHotspots, safeStorageGet, safeStorageSet, safeImageUrl } from "./store.js?v=20261113v";
 
 const PRODUCTS_KEY = "azho.admin.products.demo.v2";
 const HOTSPOTS_KEY = "azho.hotspots";
@@ -103,6 +103,12 @@ function openEdit(slug, state, trigger) {
         '<label>' + escapeHtml(t("admin.stock")) + '<input name="stock" type="number" min="0" value="' + escapeHtml(String(p.stock)) + '"></label>' +
         '<label>' + escapeHtml(t("admin.publish")) + '<input name="published" type="checkbox"' + (p.published ? " checked" : "") + '></label>' +
       "</div>" +
+      '<label>' + escapeHtml(t("admin.mannequin")) +
+        '<select name="mannequin3d">' +
+          '<option value="bust"' + (p.mannequin3d === "full" ? "" : " selected") + '>' + escapeHtml(t("admin.mannequinBust")) + "</option>" +
+          '<option value="full"' + (p.mannequin3d === "full" ? " selected" : "") + '>' + escapeHtml(t("admin.mannequinFull")) + "</option>" +
+        "</select></label>" +
+      '<p class="demo-note">' + escapeHtml(t("admin.mannequinNote")) + "</p>" +
       '<div class="admin-upload">' + escapeHtml(t("admin.upload")) + "</div>" +
       '<button type="submit" class="btn btn-primary">' + escapeHtml(t("admin.save")) + "</button>" +
     "</form>";
@@ -127,6 +133,7 @@ function openEdit(slug, state, trigger) {
     p.colours = String(fd.get("colours") || "").split(",").map((s) => s.trim()).filter(Boolean);
     p.stock = Math.max(0, Number(fd.get("stock")) || 0);
     p.published = !!fd.get("published");
+    p.mannequin3d = fd.get("mannequin3d") === "full" ? "full" : "bust";
     saveAdminProducts(state.products);
     if (typeof d.close === "function") d.close();
     else d.removeAttribute("open");

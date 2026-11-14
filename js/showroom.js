@@ -1,7 +1,8 @@
-import {createCollections} from './collections.js?v=20261113q';
-import {t,localized,formatPrice,onChange} from './i18n.js?v=20261113q';
-import {loadProducts,loadHotspots,safeStorageGet,safeImageUrl,catalogPrice} from './store.js?v=20261113q';
-import {openProductDialog,openCart,openServiceDialog} from './overlay.js?v=20261113q';
+import {createTour} from './tour.js?v=20261113v';
+import {createCollections} from './collections.js?v=20261113v';
+import {t,localized,formatPrice,onChange} from './i18n.js?v=20261113v';
+import {loadProducts,loadHotspots,safeStorageGet,safeImageUrl,catalogPrice} from './store.js?v=20261113v';
+import {openProductDialog,openCart,openServiceDialog} from './overlay.js?v=20261113v';
 
 // Runtime contract bridges old assets without rewriting CGI-owned data.
 const contract={ // generated from data/hotspots.json (cgi/scene_contract.py); regenerate when hotspots change
@@ -9,22 +10,31 @@ const contract={ // generated from data/hotspots.json (cgi/scene_contract.py); r
   'a-bust-rouge':{"stop": "A", "action": "product", "product": "deshabille-rouge"},
   'a-bust-blanc':{"stop": "A", "action": "product", "product": "nuisette-string"},
   'b-kimono':{"stop": "B", "action": "product", "product": "kimono-dentelle"},
-  'b-body':{"stop": "B", "action": "product", "product": "body-dentelle"},
-  'b-ensembles':{"stop": "B", "action": "product", "product": "ensembles-dentelle-weyes"},
-  'b-pyjama':{"stop": "B", "action": "product", "product": "pyjama-satin-tress"},
+  'b-deshabille-noir':{"stop": "B", "action": "product", "product": "deshabille-noir"},
+  'b-ensemble-jaguar':{"stop": "B", "action": "product", "product": "ensemble-nuisette-kimono-jaguar"},
   'c-jaguar':{"stop": "C", "action": "product", "product": "ensemble-nuisette-kimono-jaguar"},
   'c-leopard':{"stop": "C", "action": "product", "product": "ensemble-leopard"},
   'c-deshabille':{"stop": "C", "action": "product", "product": "deshabille-elegance"},
   'c-case':{"stop": "C", "action": "product", "product": "strings-dentelle"},
+  'f-ensembles':{"stop": "F", "action": "product", "product": "ensembles-dentelle-weyes"},
+  'f-body':{"stop": "F", "action": "product", "product": "body-dentelle"},
+  'f-trois-pieces':{"stop": "F", "action": "product", "product": "ensemble-trois-pieces-dentelle"},
+  'f-strings':{"stop": "F", "action": "product", "product": "strings-dentelle"},
   'd-table':{"stop": "D", "action": "atelier"},
   'd-swatches':{"stop": "D", "action": "atelier"},
-  'e-counter':{"stop": "E", "action": "cart"},
-  'e-delivery':{"stop": "E", "action": "delivery"},
-  'e-contact':{"stop": "E", "action": "contact"},
-  'e-brume':{"stop": "E", "action": "product", "product": "brume-intime-maison-serai"}
+  'e-tress':{"stop": "E", "action": "product", "product": "pyjama-tress"},
+  'e-satin-tress':{"stop": "E", "action": "product", "product": "pyjama-satin-tress"},
+  'e-leopard':{"stop": "E", "action": "product", "product": "pyjama-satin-leopard"},
+  'e-coton':{"stop": "E", "action": "product", "product": "pyjama-coton-boutonne"},
+  'e-primark':{"stop": "E", "action": "product", "product": "pyjama-primark"},
+  'e-cadeaux':{"stop": "E", "action": "product", "product": "coffrets-cadeaux"},
+  'g-counter':{"stop": "G", "action": "cart"},
+  'g-delivery':{"stop": "G", "action": "delivery"},
+  'g-contact':{"stop": "G", "action": "contact"},
+  'g-brume':{"stop": "G", "action": "product", "product": "brume-intime-maison-serai"}
 };
 const legacy={A:['a-enter'],B:['b-rail-1','b-rail-2','b-rail-3'],C:['c-island-1','c-rail-1'],D:['d-atelier'],E:['e-counter']};
-const groups='ABCDE'.split('').map(stop=>[stop,...Object.keys(contract).filter(id=>contract[id].stop===stop)]);
+const groups='ABCFEDG'.split('').map(stop=>[stop,...Object.keys(contract).filter(id=>contract[id].stop===stop)]);
 const arrived=new Set();let labelTimer=0;
 function revealLabels(){if(!matchMedia('(pointer: coarse)').matches||arrived.has(current()?.id))return;arrived.add(current().id);els.hotspots.classList.add('show-labels');clearTimeout(labelTimer);labelTimer=setTimeout(()=>els.hotspots.classList.remove('show-labels'),2000);}
 
@@ -66,7 +76,7 @@ function fallbackStops() {
 }
 async function fetchStops() {
   try{
-    const res=await fetch('assets/stops.json?v=20261113q',{cache:'no-cache'});
+    const res=await fetch('assets/stops.json?v=20261113v',{cache:'no-cache'});
     if(!res.ok)return fallbackStops();
     const data=await res.json();
     return groups.map(([id,...ids])=>{
@@ -81,21 +91,21 @@ function stepper() {
   const oldFocus=els.steps.contains(document.activeElement)?document.activeElement?.dataset.step:null;
   els.steps.replaceChildren(...state.stops.map((s,i)=>{
     const li=document.createElement('li'),b=document.createElement('button');b.type='button';b.dataset.step=String(i);
-    b.setAttribute('aria-label',s.id+' — '+t('stop.'+s.id));
-    const letter=document.createElement('span'),name=document.createElement('span');letter.textContent=s.id;name.className='step-name';name.textContent=t('stop.'+s.id);b.append(letter,name);if(i===state.index)b.setAttribute('aria-current','step');
+    b.setAttribute('aria-label',(state.stops.indexOf(s)+1)+' — '+t('stop.'+s.id));
+    const letter=document.createElement('span'),name=document.createElement('span');letter.textContent=String(state.stops.indexOf(s)+1);name.className='step-name';name.textContent=t('stop.'+s.id);b.append(letter,name);if(i===state.index)b.setAttribute('aria-current','step');
     b.addEventListener('click',()=>goTo(i));li.append(b);return li;
   }));
   if(oldFocus!==undefined && oldFocus!==null)els.steps.querySelector(`[data-step="${oldFocus}"]`)?.focus();
   els.prev.setAttribute('aria-disabled',String(state.index===0));els.next.setAttribute('aria-disabled',String(state.index===state.stops.length-1));
   els.hint.hidden=!firstVisit || state.index!==0;
   document.getElementById('stage-name').textContent=t('stop.'+current().id);
-  els.live.textContent=t('stepper.step',{n:state.index+1,total:5})+' — '+t('stop.'+current().id);
+  els.live.textContent=t('stepper.step',{n:state.index+1,total:state.stops.length})+' — '+t('stop.'+current().id);
 }
 function renderList() {
   // Keep the button nodes stable so closing an overlay restores the actual trigger.
   els.list.replaceChildren(...state.stops.map(s=>{
     const li=document.createElement('li'),heading=document.createElement('h3'),actions=document.createElement('ul');
-    heading.textContent=s.id+' / '+t('stop.'+s.id);li.className='fallback-stop';li.append(heading,actions);
+    heading.textContent=(state.stops.indexOf(s)+1)+' / '+t('stop.'+s.id);li.className='fallback-stop';li.append(heading,actions);
     for(const id of s.hotspots){
       const item=document.createElement('li'),b=document.createElement('button');b.type='button';b.className='list-action';b.textContent=label(id);
       b.addEventListener('click',()=>action(id));item.append(b);actions.append(item);
@@ -156,11 +166,31 @@ function showStill() {
 }
 function goTo(index) {
   if(index<0 || index>=state.stops.length)return;
+  if(state.tour){state.tour.scrollToStop(index);return;}
   if(index===state.index)return;
   state.index=index;state.scene?.setActive(true);stepper();makeHotspots();syncCollections();
   if(state.ready){state.rest=false;state.scene.setStop(current());}
   else {showStill();if(state.scene?.ready)state.scene.setStop(current(),{instant:true});}
   if(state.failed) updateFallback();
+}
+// Tour: the scroll position drives the camera; the stop index follows the nearest stop.
+function setIndex(index) {
+  if(index<0 || index>=state.stops.length || index===state.index)return;
+  state.index=index;stepper();makeHotspots();syncCollections();
+  if(!state.ready){showStill();if(state.failed)updateFallback();}
+}
+function startTour(startIndex) {
+  state.tour?.destroy();
+  state.tour=createTour({section:els.showroom,stage:els.stage,stops:state.stops,
+    getLabel:i=>t('stop.'+state.stops[i].id),t,rtl:document.documentElement.dir==='rtl',reduced,
+    onProgress:s=>{
+      const near=Math.round(s),moving=Math.abs(s-near)>=0.12;
+      els.stage.classList.toggle('is-moving',moving);
+      if(near!==state.index)setIndex(near);
+      if(state.ready)state.scene.setTourProgress(state.stops,s);
+    },
+    onSettle:i=>setIndex(i)});
+  if(startIndex>0)requestAnimationFrame(()=>state.tour.scrollToStop(startIndex,{instant:true}));
 }
 function updateFallback() {
   // Use the action list only if this stop has no usable poster coordinates.
@@ -194,7 +224,7 @@ async function loadScene() {
   };
   if(!state.stops.every(s=>Array.isArray(s.camera)&&Array.isArray(s.target))){fail();return;}
   try{
-    const {createScene}=await import('./three-scene.js?v=20261113q');
+    const {createScene}=await import('./three-scene.js?v=20261113v');
     if(generation!==sceneGeneration)return;
     scene=createScene({canvas:els.canvas,onProgress:({loaded,total})=>{
       if(generation!==sceneGeneration || !Number.isFinite(loaded) || loaded<0)return;
@@ -213,7 +243,7 @@ async function loadScene() {
         if(p){b.style.left=p.x*100+'%';b.style.top=p.y*100+'%';}}
     },onRest:rest=>{if(generation!==sceneGeneration)return;state.rest=rest;if(!rest)for(const b of els.hotspots.children)b.hidden=true;},onError:fail});
     state.scene=scene;
-    await scene.load('assets/boutique.glb?v=20261113q');
+    await scene.load('assets/boutique.glb?v=20261113v');
     if(generation!==sceneGeneration){scene.dispose();return;}
     scene.setStop(current(),{instant:true});scene.setActive(true);
   }catch(error){fail(error);}
@@ -225,7 +255,7 @@ async function enter() {
   if(els.showroom)els.showroom.hidden=false;
   // Warm the 3D module graph on the landing showroom.
   if(document.body.dataset.page==='home' || /(?:^|\/)index\.html$/.test(location.pathname || '') || document.getElementById('intro')){
-    for(const href of ['vendor/three/build/three.module.min.js?v=20261113q','vendor/three/examples/jsm/loaders/GLTFLoader.js?v=20261113q']){
+    for(const href of ['vendor/three/build/three.module.min.js?v=20261113v','vendor/three/examples/jsm/loaders/GLTFLoader.js?v=20261113v']){
       const link=document.createElement('link');link.rel='modulepreload';link.href=href;document.head.append(link);
     }
   }
@@ -235,7 +265,11 @@ async function enter() {
   state.stops=await fetchStops();
   const startIndex=state.stops.findIndex(s=>s.id===requestedStop);if(startIndex>=0)state.index=startIndex;
   stepper();renderList();makeHotspots();showStill();syncCollections();
+  startTour(Math.max(0,startIndex));
   await loadScene();
+  state.tour?.refresh();
+  // The model finished loading after the tour position was set: apply it now so beads are placed.
+  if(state.ready)state.scene.setTourProgress(state.stops,state.index);
 }
 function keyboard(e) {
   if(!state.entered || document.querySelector('dialog[open]') || e.altKey||e.ctrlKey||e.metaKey)return;
@@ -250,23 +284,6 @@ function keyboard(e) {
 
 function wireGestures() {
   const control=target=>target.closest('button,a,input,select,textarea,[role="button"],.stage-fallback');
-  let wheelTime=-Infinity, wheelTimer=0, wheelTotal=0, wheelDirection=0;
-  els.stage.addEventListener('wheel',e=>{
-    if(control(e.target)||e.ctrlKey||!state.entered||document.querySelector('dialog[open]'))return;
-    const delta=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?els.stage.clientHeight:1);
-    if(Math.abs(delta)<2 || Math.abs(e.deltaX)>Math.abs(e.deltaY))return;
-    const direction=Math.sign(delta), next=state.index+direction;
-    // Endpoints always release outward scroll, including momentum from navigation.
-    if(next<0 || next>=state.stops.length)return;
-    const now=performance.now();
-    clearTimeout(wheelTimer);
-    wheelTimer=setTimeout(()=>{wheelTotal=0;wheelDirection=0;},180);
-    if(now-wheelTime<900){wheelTime=now;return;}
-    if(direction!==wheelDirection)wheelTotal=0;
-    wheelDirection=direction;wheelTotal+=Math.abs(delta);
-    if(wheelTotal<30)return;
-    e.preventDefault();wheelTime=now;wheelTotal=0;goTo(next);
-  },{passive:false});
   let gesture=null,suppressClick=false,clickTimer=0;
   const suppress=()=>{suppressClick=true;clearTimeout(clickTimer);clickTimer=setTimeout(()=>{suppressClick=false;},120);};
   els.stage.addEventListener('pointerdown',e=>{
@@ -290,15 +307,12 @@ function wireGestures() {
     const g=gesture;gesture=null;
     const dx=e.clientX-g.x,dy=e.clientY-g.y;
     if(g.moved || Math.hypot(dx,dy)>6)suppress();
-    if(g.type==='touch' && Math.abs(dx)>40 && Math.abs(dx)>Math.abs(dy)*1.25)
-      goTo(state.index+((dx<0)!==(document.documentElement.dir==='rtl')?1:-1));
     if(els.canvas.hasPointerCapture?.(e.pointerId))els.canvas.releasePointerCapture(e.pointerId);
   });
   els.stage.addEventListener('pointercancel',()=>{if(gesture)suppress();gesture=null;});
   els.stage.addEventListener('click',e=>{
     if(suppressClick){e.preventDefault();e.stopPropagation();return;}
     if(!control(e.target) && state.ready){const id=state.scene?.hitTest?.(e.clientX,e.clientY);if(id&&current().hotspots.includes(id)){action(id);return;}}
-    if(!control(e.target) && state.index===0)goTo(1);
   },true);
 }
 
@@ -318,7 +332,6 @@ export async function init() {
   const introImage=byId('intro-img');
   if(introImage){const hide=()=>{introImage.hidden=true;};introImage.addEventListener('error',hide);if(introImage.complete&&!introImage.naturalWidth)hide();}
   els.prev.addEventListener('click',()=>goTo(state.index-1));els.next.addEventListener('click',()=>goTo(state.index+1));
-  document.addEventListener('keydown',keyboard);
   document.addEventListener('azho:collections-exit',()=>{if(collections?.active){goTo(state.index+1);els.steps.querySelector('[aria-current]')?.focus();}});
   wireGestures();
   window.addEventListener('resize',()=>{if(collections?.active&&state.ready){state.scene.setActive(true);state.scene.setStop(current(),{instant:true});}else if(state.entered&&!state.ready)showStill();});

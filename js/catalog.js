@@ -1,6 +1,6 @@
-import { t, formatPrice, escapeHtml, localized, onChange, getLang } from "./i18n.js?v=20261113q";
-import { loadProducts, categoriesOf, catalogPrice } from "./store.js?v=20261113q";
-import { openProductDialog } from "./overlay.js?v=20261113q";
+import { t, formatPrice, escapeHtml, localized, onChange, getLang } from "./i18n.js?v=20261113v";
+import { loadProducts, categoriesOf, catalogPrice } from "./store.js?v=20261113v";
+import { openProductDialog } from "./overlay.js?v=20261113v";
 
 
 function imgFallback(img) {

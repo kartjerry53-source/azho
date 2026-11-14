@@ -1,6 +1,6 @@
-import {t,localized,formatPrice,onChange} from './i18n.js?v=20261113q';
-import {isPublished,catalogPrice} from './store.js?v=20261113q';
-import {openProductDialog} from './overlay.js?v=20261113q';
+import {t,localized,formatPrice,onChange} from './i18n.js?v=20261113v';
+import {isPublished,catalogPrice} from './store.js?v=20261113v';
+import {openProductDialog} from './overlay.js?v=20261113v';
 
 // Stable buttons preserve dialog return focus and a single roving Tab stop.
 export function createCollections(stage,products,leave) {

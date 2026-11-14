@@ -1,7 +1,9 @@
-import { openProductDialog } from "./overlay.js?v=20261113q";
-import { t, formatPrice, escapeHtml, localized, onChange } from "./i18n.js?v=20261113q";
-import { getProduct, getRelated, normalizeQty, safeImageUrl, productSizes, catalogPrice, isPurchasable } from "./store.js?v=20261113q";
-import { addLine, isWished, toggleWishlist } from "./cart.js?v=20261113q";
+import { openProductDialog } from "./overlay.js?v=20261113v";
+import { t, formatPrice, escapeHtml, localized, onChange } from "./i18n.js?v=20261113v";
+import { getProduct, getRelated, normalizeQty, safeImageUrl, productSizes, catalogPrice, isPurchasable } from "./store.js?v=20261113v";
+import { addLine, isWished, toggleWishlist } from "./cart.js?v=20261113v";
+import { getModel3d, mountViewer } from "./viewer3d.js?v=20261113v";
+import { mountTonePreview } from "./tone-preview.js?v=20261113v";
 
 
 function imgFallback(img) {
@@ -243,6 +245,53 @@ function renderProduct(root, p, related) {
   if (wish) wish.addEventListener("click", () => {
     const added = toggleWishlist(p.slug);
     wish.textContent = added ? t("product.wishlistRemove") : t("product.wishlist");
+  });
+
+  getModel3d(p.id).then(entry => {
+    if (!entry || !root.isConnected) return;
+    const gallery = root.querySelector('.product-gallery');
+    const main = root.querySelector('.product-gallery-main');
+    const thumbsEl = root.querySelector('.product-gallery-thumbs');
+    if (!gallery || !main) return;
+    const toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'btn btn-ghost view3d-toggle';
+    toggle.setAttribute('aria-pressed', 'false');
+    toggle.textContent = t('viewer.open');
+    gallery.append(toggle);
+    let viewer = null;
+    let host = null;
+    toggle.addEventListener('click', () => {
+      if (!host) {
+        const mainImg = main.querySelector('img');
+        if (mainImg) mainImg.hidden = true;
+        if (thumbsEl) thumbsEl.hidden = true;
+        host = document.createElement('div');
+        host.className = 'viewer3d-host';
+        main.append(host);
+        toggle.textContent = t('viewer.close');
+        toggle.setAttribute('aria-pressed', 'true');
+        mountViewer(host, entry, { reduced: matchMedia('(prefers-reduced-motion: reduce)').matches })
+          .then(v => { if (host) viewer = v; else v.destroy(); });
+      } else {
+        viewer?.destroy();
+        viewer = null;
+        if (host) { host.remove(); host = null; }
+        const mainImg = main.querySelector('img');
+        if (mainImg) mainImg.hidden = false;
+        if (thumbsEl) thumbsEl.hidden = false;
+        toggle.textContent = t('viewer.open');
+        toggle.setAttribute('aria-pressed', 'false');
+      }
+    });
+    if (entry.tones && typeof entry.tones === 'object' && Object.keys(entry.tones).length >= 2) {
+      const layout = root.querySelector('.product-layout');
+      if (layout) {
+        mountTonePreview(layout, entry, { productName: name }).catch(err => {
+          console.warn('[tone-preview] mount failed:', err);
+        });
+      }
+    }
   });
 }
 

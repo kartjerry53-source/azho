@@ -1,6 +1,6 @@
-const PRODUCTS_URL = "data/products.json?v=20261113q";
-const WILAYAS_URL = "data/wilayas.json?v=20261113q";
-const HOTSPOTS_URL = "data/hotspots.json?v=20261113q";
+const PRODUCTS_URL = "data/products.json?v=20261113v";
+const WILAYAS_URL = "data/wilayas.json?v=20261113v";
+const HOTSPOTS_URL = "data/hotspots.json?v=20261113v";
 
 let productsPromise = null;
 let loadedProducts = [];

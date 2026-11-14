@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { GLTFLoader } from '../vendor/three/examples/jsm/loaders/GLTFLoader.js?v=20261113q';
+import { GLTFLoader } from '../vendor/three/examples/jsm/loaders/GLTFLoader.js?v=20261113v';
 
 // No light rig: the independent CGI asset contains baked lighting.
 export function createScene({canvas, onProject, onRest, onError, onFirstFrame, onSuspend, onProgress}) {
@@ -16,6 +16,7 @@ export function createScene({canvas, onProject, onRest, onError, onFirstFrame, o
   const frame = {px: 0, py: 1.55, pz: 7, tx: 0, ty: 1.5, tz: 0, fov: 45};
   const hitVolumes=[];let hoverAt=0;
   let model = null, stop = null, active = false, intersecting = true, disposed = false;
+  let robot = null;
   let raf = 0, tween = null, fade = null, lookTween = null, moving = false, cutToken = 0;
   let firstFrame = false, contextUnavailable = false, restoreTimer = 0, pixelCap = 1.75, slowFrames = 0, lastMovingDraw = 0;
   let pointer = {x: 0, y: 0};
@@ -52,6 +53,7 @@ export function createScene({canvas, onProject, onRest, onError, onFirstFrame, o
     const started=globalThis.performance?.now() || 0;
     try {renderer.render(scene,camera);} catch(error) {onError?.(error);return;}
     if (disposed || contextUnavailable || renderer.getContext?.().isContextLost()) return;
+    robot?.update();
     const elapsed=(globalThis.performance?.now() || 0)-started;
     // Adapt only after repeated expensive draws; idle frames never form a loop.
     const now=globalThis.performance?.now() || 0;
@@ -123,14 +125,19 @@ export function createScene({canvas, onProject, onRest, onError, onFirstFrame, o
       };
       mesh.material=Array.isArray(mesh.material)?mesh.material.map(replace):replace(mesh.material);
     });
-    scene.add(model); resize(); requestRender(); return true;
+    scene.add(model); resize(); requestRender();
+    import("./robot.js?v=20261113v").then(m => m.createRobot({ THREE, GLTFLoader, scene, camera, renderer, requestRender, stage: canvas.parentElement, reduced: matchMedia("(prefers-reduced-motion: reduce)").matches })).then(r => { robot = r; requestRender(); }).catch(e => console.warn("[robot]", e));
+    return true;
+  }
+  function stopFrame(next) {
+    return {px:next.camera[0],py:next.camera[1],pz:next.camera[2],
+      tx:next.target[0],ty:next.target[1],tz:next.target[2],
+      fov:innerHeight>innerWidth?(next.fovMobile||next.fov):next.fov};
   }
   function setStop(next,{instant=false}={}) {
     if (!next?.camera || !next?.target) return;
     canvas.style.cursor='';stop=next; lookTween?.kill(); pointer={x:0,y:0}; tween?.kill(); fade?.kill(); cutToken++;
-    const target={px:next.camera[0],py:next.camera[1],pz:next.camera[2],
-      tx:next.target[0],ty:next.target[1],tz:next.target[2],
-      fov:innerHeight>innerWidth?(next.fovMobile||next.fov):next.fov};
+    const target=stopFrame(next);
     const finish=()=>{moving=false; onRest?.(true); requestRender();};
     moving=true; onRest?.(false);
     if (instant) {canvas.style.opacity='';Object.assign(frame,target); finish();}
@@ -144,6 +151,42 @@ export function createScene({canvas, onProject, onRest, onError, onFirstFrame, o
       tween=window.gsap.to(frame,{...target,duration:1.6,ease:'power2.inOut',onUpdate:requestRender,onComplete:finish});
       syncPause();
     }
+  }
+  function setTourProgress(stops, s) {
+    if (!Array.isArray(stops) || !stops.length) return;
+    const len = stops.length;
+    const clamped = Math.max(0, Math.min(len - 1, s));
+    const i = Math.floor(clamped);
+    const j = Math.min(i + 1, len - 1);
+    const t = clamped - i;
+    const e = t * t * (3 - 2 * t);
+    const a = stopFrame(stops[i]);
+    const b = stopFrame(stops[j]);
+    tween?.kill(); fade?.kill(); cutToken++;
+    // Quadratic Bezier: control point is the midpoint moved 30% toward the
+    // hall centre line (Blender x = 0, which setStop maps to frame.px) and
+    // lifted +0.15 m in height (Blender z, mapped to frame.py).
+    const mx = (a.px + b.px) / 2, my = (a.py + b.py) / 2, mz = (a.pz + b.pz) / 2;
+    const cx = mx + (0 - mx) * 0.3;
+    const cy = my + 0.15;
+    const cz = mz;
+    const u = 1 - e;
+    frame.px = u * u * a.px + 2 * u * e * cx + e * e * b.px;
+    frame.py = u * u * a.py + 2 * u * e * cy + e * e * b.py;
+    frame.pz = u * u * a.pz + 2 * u * e * cz + e * e * b.pz;
+    frame.tx = a.tx + (b.tx - a.tx) * e;
+    frame.ty = a.ty + (b.ty - a.ty) * e;
+    frame.tz = a.tz + (b.tz - a.tz) * e;
+    frame.fov = a.fov + (b.fov - a.fov) * e;
+    const near = Math.round(clamped);
+    const resting = Math.abs(clamped - near) < 0.12;
+    stop = stops[near];
+    const wasMoving = moving;
+    moving = !resting;
+    if (wasMoving !== moving) onRest?.(resting);
+    paintCamera(); // apply the new camera before projecting, or beads use the previous view
+    requestRender();
+    if (resting) project();
   }
   function setPointer(x,y) {
     if(moving) return;
@@ -175,8 +218,8 @@ export function createScene({canvas, onProject, onRest, onError, onFirstFrame, o
     canvas.removeEventListener('webglcontextrestored',contextRestored);
     const textures=new Set();
     model?.traverse(mesh=>{if(mesh.isMesh){mesh.geometry.dispose();for(const mat of(Array.isArray(mesh.material)?mesh.material:[mesh.material])){if(mat.map)textures.add(mat.map);mat.dispose();}}});
-    textures.forEach(texture=>texture.dispose());renderer.dispose();
+    textures.forEach(texture=>texture.dispose());robot?.dispose();robot=null;renderer.dispose();
   }
   resize();
-  return {hitTest,hover,load,setStop,setPointer,getLook:()=>({...pointer}),setActive,dispose,get ready(){return !!model;}};
+  return {hitTest,hover,load,setStop,setTourProgress,setPointer,getLook:()=>({...pointer}),setActive,dispose,get ready(){return !!model;}};
 }

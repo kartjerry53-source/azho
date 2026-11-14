@@ -1,9 +1,10 @@
-import { t, escapeHtml, localized, formatPrice, onChange } from "./i18n.js?v=20261113q";
+import { t, escapeHtml, localized, formatPrice, onChange } from "./i18n.js?v=20261113v";
 import {
   initCart, renderCart, renderWishlist,
   addLine, toggleWishlist, isWished, onCartChange, updateCounts
-} from "./cart.js?v=20261113q";
-import { loadProducts, normalizeQty, safeImageUrl, productSizes, catalogPrice, isPurchasable } from "./store.js?v=20261113q";
+} from "./cart.js?v=20261113v";
+import { loadProducts, normalizeQty, safeImageUrl, productSizes, catalogPrice, isPurchasable } from "./store.js?v=20261113v";
+import { getModel3d, mountViewer } from "./viewer3d.js?v=20261113v";
 
 /* ---------- Shared image fallback (no inline onerror) ---------- */
 
@@ -197,6 +198,42 @@ function wireProductDialog(body, p) {
     const img=document.createElement('img');img.width=64;img.height=80;img.src=safeImageUrl(src);img.alt='';img.loading='lazy';b.append(img);
     b.addEventListener('click',()=>{const main=gallery.querySelector('.product-gallery-main img');main.src=safeImageUrl(src);main.alt=t('product.imageAlt',{name:localized(p.name),n:i+1});thumbs.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));});thumbs.append(b);
   });gallery.append(thumbs);
+  getModel3d(p.id).then(entry => {
+    if (!entry || !body.isConnected) return;
+    const toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'btn btn-ghost view3d-toggle';
+    toggle.setAttribute('aria-pressed', 'false');
+    toggle.textContent = t('viewer.open');
+    gallery.append(toggle);
+    let viewer = null;
+    let host = null;
+    toggle.addEventListener('click', () => {
+      const main = gallery.querySelector('.product-gallery-main');
+      if (!main) return;
+      if (!host) {
+        const mainImg = main.querySelector('img');
+        if (mainImg) mainImg.hidden = true;
+        thumbs.hidden = true;
+        host = document.createElement('div');
+        host.className = 'viewer3d-host';
+        main.append(host);
+        toggle.textContent = t('viewer.close');
+        toggle.setAttribute('aria-pressed', 'true');
+        mountViewer(host, entry, { reduced: matchMedia('(prefers-reduced-motion: reduce)').matches })
+          .then(v => { if (host) viewer = v; else v.destroy(); });
+      } else {
+        viewer?.destroy();
+        viewer = null;
+        if (host) { host.remove(); host = null; }
+        const mainImg = main.querySelector('img');
+        if (mainImg) mainImg.hidden = false;
+        thumbs.hidden = false;
+        toggle.textContent = t('viewer.open');
+        toggle.setAttribute('aria-pressed', 'false');
+      }
+    });
+  });
   const qtyInput = body.querySelector("[data-qty]");
   const sizeError = body.querySelector("#pd-size-error");
 

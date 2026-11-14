@@ -1,13 +1,13 @@
-import { initI18n } from "./i18n.js?v=20261113q";
-import { initTheme } from "./theme.js?v=20261113q";
-import { initOverlay } from "./overlay.js?v=20261113q";
+import { initI18n } from "./i18n.js?v=20261113v";
+import { initTheme } from "./theme.js?v=20261113v";
+import { initOverlay } from "./overlay.js?v=20261113v";
 
 const PAGE_MODULES = {
-  showroom: "./showroom.js?v=20261113q",
-  shop: "./catalog.js?v=20261113q",
-  product: "./product.js?v=20261113q",
-  atelier: "./atelier.js?v=20261113q",
-  admin: "./admin.js?v=20261113q"
+  showroom: "./showroom.js?v=20261113v",
+  shop: "./catalog.js?v=20261113v",
+  product: "./product.js?v=20261113v",
+  atelier: "./atelier.js?v=20261113v",
+  admin: "./admin.js?v=20261113v"
 };
 
 async function boot() {

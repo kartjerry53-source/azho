@@ -1,6 +1,6 @@
-import { t, localized, formatPrice, escapeHtml, onChange } from "./i18n.js?v=20261113q";
-import { loadProducts, safeImageUrl } from "./store.js?v=20261113q";
-import { openProductDialog } from "./overlay.js?v=20261113q";
+import { t, localized, formatPrice, escapeHtml, onChange } from "./i18n.js?v=20261113v";
+import { loadProducts, safeImageUrl } from "./store.js?v=20261113v";
+import { openProductDialog } from "./overlay.js?v=20261113v";
 
 let mounted = false;
 let products = [];
@@ -9,7 +9,7 @@ function ensureStyles() {
   if (document.querySelector('link[data-home-css], link[href^="css/home.css"]')) return;
   const link = document.createElement("link");
   link.rel = "stylesheet";
-  link.href = "css/home.css?v=20261113q";
+  link.href = "css/home.css?v=20261113v";
   link.setAttribute("data-home-css", "");
   document.head.appendChild(link);
 }
