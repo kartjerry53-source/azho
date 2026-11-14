@@ -1,1 +1,42 @@
-{}
+{
+  "5138": {
+    "bytes1k": 2061824,
+    "bytes2k": 2061824,
+    "demo": true,
+    "mannequin": true,
+    "mannequinType": "bust",
+    "model1k": "assets/products/3d/test-fbx-set/model-1k.glb",
+    "model2k": "assets/products/3d/test-fbx-set/model-2k.glb",
+    "poster": "assets/products/3d/test-fbx-set/poster.jpg",
+    "slug": "test-fbx-set",
+    "source": "ensemble-rouge.FBX",
+    "tones": {
+      "deep": "assets/products/3d/test-fbx-set/tone-deep.jpg",
+      "fair": "assets/products/3d/test-fbx-set/tone-fair.jpg",
+      "light": "assets/products/3d/test-fbx-set/tone-light.jpg",
+      "medium": "assets/products/3d/test-fbx-set/tone-medium.jpg",
+      "tan": "assets/products/3d/test-fbx-set/tone-tan.jpg"
+    },
+    "updated": "2026-11-14"
+  },
+  "5144": {
+    "bytes1k": 2058640,
+    "bytes2k": 2058640,
+    "demo": true,
+    "mannequin": true,
+    "mannequinType": "full",
+    "model1k": "assets/products/3d/test-fbx-set-full/model-1k.glb",
+    "model2k": "assets/products/3d/test-fbx-set-full/model-2k.glb",
+    "poster": "assets/products/3d/test-fbx-set-full/poster.jpg",
+    "slug": "test-fbx-set-full",
+    "source": "ensemble-rouge.FBX",
+    "tones": {
+      "deep": "assets/products/3d/test-fbx-set-full/tone-deep.jpg",
+      "fair": "assets/products/3d/test-fbx-set-full/tone-fair.jpg",
+      "light": "assets/products/3d/test-fbx-set-full/tone-light.jpg",
+      "medium": "assets/products/3d/test-fbx-set-full/tone-medium.jpg",
+      "tan": "assets/products/3d/test-fbx-set-full/tone-tan.jpg"
+    },
+    "updated": "2026-11-14"
+  }
+}
