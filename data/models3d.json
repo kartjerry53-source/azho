@@ -71,6 +71,32 @@
       "medium": "assets/products/3d/top-briefs/tone-medium.jpg",
       "tan": "assets/products/3d/top-briefs/tone-tan.jpg"
     },
-    "updated": "2026-11-14"
+    "updated": "2026-11-14",
+    "colours": [
+      {
+        "id": "bordeaux",
+        "hex": "#702C3F"
+      },
+      {
+        "id": "noir",
+        "hex": "#1E1A1C"
+      },
+      {
+        "id": "nude",
+        "hex": "#C99A82"
+      },
+      {
+        "id": "rose",
+        "hex": "#D9A3A8"
+      },
+      {
+        "id": "marine",
+        "hex": "#1F2A44"
+      },
+      {
+        "id": "ivoire",
+        "hex": "#EDE3D4"
+      }
+    ]
   }
 }

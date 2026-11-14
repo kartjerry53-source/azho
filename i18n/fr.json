@@ -292,5 +292,10 @@
   "cart.waOrder": "Commande",
   "cart.waItems": "Articles",
   "cart.waCustomer": "Client",
-  "cart.waTotal": "Total (hors livraison)"
+  "cart.waTotal": "Total (hors livraison)",
+  "viewer.colour": "Choisir une couleur",
+  "colour.bordeaux": "Bordeaux",
+  "colour.ivoire": "Ivoire",
+  "colour.marine": "Marine",
+  "colour.nude": "Nude"
 }

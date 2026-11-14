@@ -29,6 +29,13 @@ function sanitizeEntry(raw) {
     mannequinType: raw.mannequinType === "full" ? "full" : "bust",
     demo: raw.demo === true
   };
+  if (Array.isArray(raw.colours)) {
+    const cols = raw.colours
+      .filter((c) => c && /^[a-z-]{2,20}$/.test(c.id) && /^#[0-9a-fA-F]{6}$/.test(c.hex))
+      .slice(0, 8)
+      .map((c) => ({ id: c.id, hex: c.hex }));
+    if (cols.length >= 2) entry.colours = cols;
+  }
   return entry;
 }
 
@@ -72,6 +79,24 @@ function collectBodyMaterials(scene) {
     }
   });
   return out;
+}
+
+function collectMaterials(root) {
+  const out = [];
+  if (!root) return out;
+  root.traverse((o) => {
+    if (!o.isMesh) return;
+    for (const m of (Array.isArray(o.material) ? o.material : [o.material])) if (m && m.color && !out.includes(m)) out.push(m);
+  });
+  return out;
+}
+
+function applyColour(materials, hex) {
+  for (const m of materials) {
+    if (!m.userData.azhoBase) m.userData.azhoBase = m.color.getHex();
+    if (hex) m.color.set(hex); else m.color.setHex(m.userData.azhoBase);
+    m.needsUpdate = true;
+  }
 }
 
 function applyTone(materials, tone) {
@@ -151,6 +176,44 @@ export function mountViewer(container, entry, opts = {}) {
       window.addEventListener("azho:tone", onExternalTone);
     }
 
+    // Garment colours: a swatch row inside the viewer (first swatch = the model's own colour).
+    let currentColour = null;
+    function garmentMaterials() { return [...collectMaterials(model1kScene), ...collectMaterials(model2kScene)]; }
+    if (entry.colours) {
+      const row = document.createElement("div");
+      row.className = "viewer3d-colours";
+      row.setAttribute("role", "radiogroup");
+      row.setAttribute("aria-label", t("viewer.colour"));
+      const btns = entry.colours.map((c, i) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "viewer3d-colour";
+        b.setAttribute("role", "radio");
+        b.setAttribute("aria-checked", i === 0 ? "true" : "false");
+        b.tabIndex = i === 0 ? 0 : -1;
+        const name = t("colour." + c.id);
+        b.setAttribute("aria-label", name);
+        b.title = name;
+        b.style.setProperty("--swatch", c.hex);
+        b.addEventListener("click", () => pick(i));
+        b.addEventListener("keydown", (e) => {
+          const rtl = document.documentElement.dir === "rtl";
+          const step = { ArrowRight: rtl ? -1 : 1, ArrowLeft: rtl ? 1 : -1, ArrowDown: 1, ArrowUp: -1 }[e.key];
+          if (step) { e.preventDefault(); pick((i + step + btns.length) % btns.length, true); }
+        });
+        row.append(b);
+        return b;
+      });
+      function pick(i, focus) {
+        btns.forEach((b, k) => { b.setAttribute("aria-checked", k === i ? "true" : "false"); b.tabIndex = k === i ? 0 : -1; });
+        if (focus) btns[i].focus();
+        currentColour = i === 0 ? null : entry.colours[i].hex;
+        applyColour(garmentMaterials(), currentColour);
+        scheduleRender();
+      }
+      root.append(row);
+    }
+
     if (entry.demo) {
       const note = document.createElement("p");
       note.className = "viewer3d-demo";
@@ -211,6 +274,7 @@ export function mountViewer(container, entry, opts = {}) {
           const old = model1kScene;
           model2kScene = gltf.scene;
           scene.add(model2kScene);
+          if (currentColour) applyColour(collectMaterials(model2kScene), currentColour);
           if (old) {
             scene.remove(old);
             disposeObject(old);

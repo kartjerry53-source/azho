@@ -1046,3 +1046,21 @@ html body .tour-dots { align-items: center; gap: 9px; padding: 8px 12px; }
 :root { --azho-logo: #3B1726; }
 html body .site-header a.brand { background: var(--azho-logo); }
 :root[data-theme="dark"] body .site-header a.brand { background: var(--g-ink); }
+
+/* Garment colour swatches inside the 360 viewer (bottom, above the hint) */
+.viewer3d-colours {
+  position: absolute; inset-inline-start: 50%; transform: translateX(-50%);
+  inset-block-end: 64px; display: flex; gap: 8px; padding: 6px 10px; border-radius: 999px;
+  background: rgba(255, 250, 242, 0.55); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  z-index: 2;
+}
+[dir="rtl"] .viewer3d-colours { transform: translateX(50%); }
+.viewer3d-colour {
+  inline-size: 30px; block-size: 30px; border-radius: 50%; padding: 0; cursor: pointer;
+  background: var(--swatch); border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.viewer3d-colour[aria-checked="true"] { outline: 2px solid #B18A50; outline-offset: 2px; }
+.viewer3d-colour:focus-visible { outline: 2px solid #3B1726; outline-offset: 3px; }
+:root[data-theme="dark"] .viewer3d-colours { background: rgba(30, 18, 26, 0.45); }
+.viewer3d .viewer3d-colours .viewer3d-colour { flex: 0 0 34px; inline-size: 34px; block-size: 34px; min-inline-size: 34px; min-block-size: 34px; max-block-size: 34px; aspect-ratio: 1; }

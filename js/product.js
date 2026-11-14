@@ -3,7 +3,8 @@ import { t, formatPrice, escapeHtml, localized, onChange } from "./i18n.js?v=202
 import { getProduct, getRelated, normalizeQty, safeImageUrl, productSizes, catalogPrice, isPurchasable } from "./store.js?v=20261113v";
 import { addLine, isWished, toggleWishlist } from "./cart.js?v=20261113v";
 import { getModel3d, mountViewer } from "./viewer3d.js?v=20261113v";
-import { mountTonePreview } from "./tone-preview.js?v=20261113v";
+// Five-tone section under the product is off: skin tones are chosen inside the 360° viewer only.
+const SHOW_TONE_SECTION = false;
 
 
 function imgFallback(img) {
@@ -285,10 +286,10 @@ function renderProduct(root, p, related) {
         toggle.setAttribute('aria-pressed', 'false');
       }
     });
-    if (entry.tones && typeof entry.tones === 'object' && Object.keys(entry.tones).length >= 2) {
+    if (SHOW_TONE_SECTION && entry.tones && typeof entry.tones === 'object' && Object.keys(entry.tones).length >= 2) {
       const layout = root.querySelector('.product-layout');
       if (layout) {
-        mountTonePreview(layout, entry, { productName: name }).catch(err => {
+        import("./tone-preview.js?v=20261113v").then(m => m.mountTonePreview(layout, entry, { productName: name })).catch(err => {
           console.warn('[tone-preview] mount failed:', err);
         });
       }

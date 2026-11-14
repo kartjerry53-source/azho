@@ -292,5 +292,10 @@
   "cart.waOrder": "الطلب",
   "cart.waItems": "المنتجات",
   "cart.waCustomer": "الزبون",
-  "cart.waTotal": "المجموع (دون التوصيل)"
+  "cart.waTotal": "المجموع (دون التوصيل)",
+  "viewer.colour": "اختاري لونًا",
+  "colour.bordeaux": "عنابي",
+  "colour.ivoire": "عاجي",
+  "colour.marine": "كحلي",
+  "colour.nude": "بلون البشرة"
 }

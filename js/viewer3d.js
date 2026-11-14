@@ -46,6 +46,13 @@ function sanitizeEntry(raw) {
   };
   const tones = sanitizeTones(raw.tones);
   if (tones) entry.tones = tones;
+  if (Array.isArray(raw.colours)) {
+    const cols = raw.colours
+      .filter((c) => c && /^[a-z-]{2,20}$/.test(c.id) && /^#[0-9a-fA-F]{6}$/.test(c.hex))
+      .slice(0, 8)
+      .map((c) => ({ id: c.id, hex: c.hex }));
+    if (cols.length >= 2) entry.colours = cols;
+  }
   return entry;
 }
 

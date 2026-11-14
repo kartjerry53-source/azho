@@ -292,5 +292,10 @@
   "cart.waOrder": "Order",
   "cart.waItems": "Items",
   "cart.waCustomer": "Customer",
-  "cart.waTotal": "Total (excluding delivery)"
+  "cart.waTotal": "Total (excluding delivery)",
+  "viewer.colour": "Choose a colour",
+  "colour.bordeaux": "Burgundy",
+  "colour.ivoire": "Ivory",
+  "colour.marine": "Navy",
+  "colour.nude": "Nude"
 }
