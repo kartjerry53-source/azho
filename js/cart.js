@@ -179,7 +179,7 @@ export function saveOrder(order) {
   const list = safeStorageGet(ORDER_KEY, []);
   const src = order && typeof order === "object" ? order : {};
   const meta = {
-    number: typeof src.number === "string" ? src.number : demoOrderNumber(),
+    number: typeof src.number === "string" ? src.number : orderNumber(),
     at: new Date().toISOString(),
     delivery: src.delivery === "stopdesk" ? "stopdesk" : "home",
     payment: "cod", total, lines: cart.map(l => ({ ...l }))
@@ -187,8 +187,25 @@ export function saveOrder(order) {
   return safeStorageSet(ORDER_KEY, [...(Array.isArray(list) ? list : []), meta].slice(-20));
 }
 
-export function demoOrderNumber() {
-  return "AZHO-DEMO-" + Date.now().toString(36).toUpperCase();
+function randomBase36(n) {
+  const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const out = [];
+  const buf = new Uint8Array(n);
+  if (typeof crypto !== "undefined" && typeof crypto.getRandomValues === "function") {
+    crypto.getRandomValues(buf);
+    for (let i = 0; i < n; i++) out.push(chars[buf[i] % 36]);
+  } else {
+    for (let i = 0; i < n; i++) out.push(chars[Math.floor(Math.random() * 36)]);
+  }
+  return out.join("");
+}
+
+export function orderNumber() {
+  const d = new Date();
+  const yy = String(d.getFullYear() % 100).padStart(2, "0");
+  const mm = String(d.getMonth() + 1).padStart(2, "0");
+  const dd = String(d.getDate()).padStart(2, "0");
+  return "AZHO-" + yy + mm + dd + "-" + randomBase36(4);
 }
 
 /* ---------- Rendering ---------- */
@@ -342,6 +359,63 @@ export function validatePhone(raw) {
   return PHONE_RE.test(s);
 }
 
+const WA_NUMBER = "213551210696";
+const WA_MAX_LEN = 3500;
+
+export function buildWhatsAppMessage(order) {
+  const src = order && typeof order === "object" ? order : {};
+  const lines = Array.isArray(src.lines) ? src.lines : [];
+  const head = [
+    t("cart.waIntro"),
+    "",
+    t("cart.waOrder") + ": " + String(src.number || ""),
+    "",
+    t("cart.waItems") + ":"
+  ];
+  const itemLines = lines.map((l) => {
+    const meta = lineMeta(l);
+    return "• " + localized(l.name) + (meta ? " (" + meta + ")" : "") + " × " + l.qty + " — " + formatPrice(l.price * l.qty);
+  });
+  const tail = [
+    "",
+    t("cart.waTotal") + ": " + formatPrice(Number(src.total) || 0),
+    "",
+    t("cart.waCustomer") + ":",
+    String(src.fullName || ""),
+    String(src.phone || ""),
+    String(src.wilayaLabel || ""),
+    String(src.commune || ""),
+    String(src.address || ""),
+    "",
+    t("cart.delivery") + ": " + (src.delivery === "stopdesk" ? t("cart.stopdesk") : t("cart.home")),
+    t("cart.paymentLabel") + ": " + t("cart.paymentCod")
+  ];
+  let message = head.concat(itemLines, tail).join("\n");
+  if (message.length > WA_MAX_LEN) {
+    // Truncate the address first, then drop trailing item lines, keeping the tail intact.
+    const tailStr = tail.join("\n");
+    const budget = WA_MAX_LEN - tailStr.length - 1;
+    let body = head.concat(itemLines).join("\n");
+    if (body.length > budget) {
+      const trimmed = [];
+      let used = head.join("\n").length;
+      for (const it of itemLines) {
+        if (used + 1 + it.length > budget) break;
+        trimmed.push(it);
+        used += 1 + it.length;
+      }
+      body = head.concat(trimmed).join("\n");
+    }
+    message = body + "\n" + tailStr;
+    if (message.length > WA_MAX_LEN) message = message.slice(0, WA_MAX_LEN);
+  }
+  return message;
+}
+
+export function whatsAppUrl(message) {
+  return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(String(message || ""));
+}
+
 export async function renderCheckout(container) {
   if (!container) return;
   reconcile();
@@ -391,7 +465,7 @@ export async function renderCheckout(container) {
       '<p class="checkout-note" id="payment-note">' + escapeHtml(t("cart.feeNote")) + "</p>" +
       '<p class="checkout-note">' + escapeHtml(t("cart.services")) + "</p>" +
       '<button type="submit" class="btn btn-primary">' + escapeHtml(t("cart.submit")) + "</button>" +
-      '<p class="checkout-note">' + escapeHtml(t("cart.noNetwork")) + "</p>" +
+      '<p class="checkout-note">' + escapeHtml(t("cart.whatsappNote")) + "</p>" +
     "</form>";
 
   const form = container.querySelector("#checkout-form");
@@ -430,14 +504,35 @@ export async function renderCheckout(container) {
       return;
     }
 
-    const number = demoOrderNumber();
+    const wilayaObj = list.find(w => String(w.code) === wilaya);
+    const wilayaLabel = wilayaObj
+      ? String(wilayaObj.code).padStart(2, "0") + " — " + (getLang() === "ar" ? wilayaObj.ar : wilayaObj.fr)
+      : wilaya;
+    const delivery = String(data.get("delivery") || "home");
+    const number = orderNumber();
+    const resolvedLines = getCart().filter(Boolean);
+    const total = cartTotal();
+
+    const message = buildWhatsAppMessage({
+      number,
+      lines: resolvedLines,
+      total,
+      fullName,
+      phone,
+      wilayaLabel,
+      commune,
+      address,
+      delivery
+    });
+    const url = whatsAppUrl(message);
+
     const saved = saveOrder({
       number,
       at: new Date().toISOString(),
-      delivery: String(data.get("delivery") || "home"),
+      delivery,
       payment: String(data.get("payment") || "cod"),
       lines: cart.slice(),
-      total: cartTotal()
+      total
     });
 
     if (!saved) {
@@ -448,6 +543,8 @@ export async function renderCheckout(container) {
       return;
     }
 
+    window.open(url, "_blank", "noopener");
+
     const live = document.getElementById("cart-body");
     clearCart();
     const target = live || container;
@@ -456,7 +553,8 @@ export async function renderCheckout(container) {
         "<strong>" + escapeHtml(t("cart.successFocus")) + "</strong>" +
         '<p class="demo-order-label">' + escapeHtml(t("cart.demoNumber")) + '</p><p class="demo-order-number" dir="ltr">' + escapeHtml(number) + '</p>' +
         "<p>" + escapeHtml(t("cart.noNetwork")) + "</p>" +
-        '<button type="button" class="btn btn-primary" data-continue-shopping>' + escapeHtml(t("cart.continueShopping")) + '</button>' +
+        '<a class="btn btn-primary" href="' + escapeHtml(url) + '" target="_blank" rel="noopener noreferrer" data-wa-send>' + escapeHtml(t("cart.whatsappSend")) + "</a>" +
+        '<button type="button" class="btn btn-ghost" data-continue-shopping>' + escapeHtml(t("cart.continueShopping")) + '</button>' +
       "</div>";
     const box = target.querySelector("#checkout-success");
     if (box) box.focus();
