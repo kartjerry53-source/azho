@@ -31,7 +31,8 @@ const contract={ // generated from data/hotspots.json (cgi/scene_contract.py); r
   'g-counter':{"stop": "G", "action": "cart"},
   'g-delivery':{"stop": "G", "action": "delivery"},
   'g-contact':{"stop": "G", "action": "contact"},
-  'g-brume':{"stop": "G", "action": "product", "product": "brume-intime-maison-serai"}
+  'g-brume':{"stop": "G", "action": "product", "product": "brume-intime-maison-serai"},
+  'g-corset':{"stop": "G", "action": "product", "product": "corset-demo-3d"}
 };
 const legacy={A:['a-enter'],B:['b-rail-1','b-rail-2','b-rail-3'],C:['c-island-1','c-rail-1'],D:['d-atelier'],E:['e-counter']};
 const groups='ABCFEDG'.split('').map(stop=>[stop,...Object.keys(contract).filter(id=>contract[id].stop===stop)]);
@@ -119,7 +120,7 @@ function makeHotspots() {
     b.setAttribute('aria-label',label(id));b.title=label(id);b.hidden=true;
     const ring=document.createElement('span');ring.className='hotspot-ring';ring.setAttribute('aria-hidden','true');b.append(ring);
     if(id==='a-enter'){b.classList.add('hotspot-enter');const text=document.createElement('span'),arrow=document.createElement('span');text.textContent=label(id);arrow.className='enter-arrow';arrow.textContent='→';arrow.setAttribute('aria-hidden','true');b.append(text,arrow);}
-    const tag=document.createElement('span');tag.className='hotspot-label';const m=mapping(id),p=m?.action==='product'?product(m.product):null;const price=catalogPrice(p);tag.textContent=label(id)+(p?' · '+(price==null?t('product.priceOnRequest'):formatPrice(price)):'');b.append(tag);
+    const tag=document.createElement('span');tag.className='hotspot-label';const m=mapping(id),p=m?.action==='product'?product(m.product):null;const price=catalogPrice(p);tag.textContent=label(id)+(p&&!p.source?.demo?' · '+(price==null?t('product.priceOnRequest'):formatPrice(price)):'');b.append(tag);
     b.addEventListener('click',()=>action(id));return b;
   }));
   els.hotspots.removeAttribute('aria-hidden');els.hotspots.classList.remove('show-labels');

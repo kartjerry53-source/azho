@@ -123,5 +123,10 @@
     "stop": "G",
     "action": "product",
     "product": "brume-intime-maison-serai"
+  },
+  "g-corset": {
+    "stop": "G",
+    "action": "product",
+    "product": "corset-demo-3d"
   }
 }
