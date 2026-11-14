@@ -119,6 +119,7 @@ function productDialogHtml(p) {
         escapeHtml(formatPrice(price))
       : escapeHtml(formatPrice(price));
   const purchasable = isPurchasable(p);
+  const isDemo = !!(p.source && p.source.demo);   // 3D demonstration item: no price, no order buttons
 
   const colours = (p.colours || []).map((c, i) =>
     '<button type="button" class="option-chip" aria-describedby="pd-colour-error" data-colour="' + escapeHtml(c) +
@@ -141,8 +142,8 @@ function productDialogHtml(p) {
       "</div>" +
       '<div class="product-info">' +
         "<h3>" + escapeHtml(name) + "</h3>" +
-        '<p class="product-price">' + priceHtml + "</p>" +
-        (colours
+        (isDemo ? "" : '<p class="product-price">' + priceHtml + "</p>") +
+        (isDemo ? "" : (colours
           ? '<div class="option-group"><span>' + escapeHtml(t("product.colour")) +
             '</span><div class="option-row" role="group" aria-label="' + escapeHtml(t('product.colour')) + '">' + colours + '</div><p id="pd-colour-error" class="field-error" aria-live="polite"></p></div>'
           : "") +
@@ -176,13 +177,13 @@ function productDialogHtml(p) {
               '<a class="btn btn-primary" href="tel:+213551210696" dir="ltr">' + escapeHtml(t("product.askPrice")) + "</a>" +
               '<a class="btn btn-ghost" href="https://www.instagram.com/azholingerie/" target="_blank" rel="noopener">Instagram</a>' +
               '<p class="demo-note">' + escapeHtml(t("product.priceNote")) + "</p>" +
-            "</div>") +
+            "</div>")) +
         '<p class="product-description">' + escapeHtml(desc) + '</p>' +
         '<a class="btn btn-ghost" href="product.html?slug=' +
           encodeURIComponent(p.slug) + '">' + escapeHtml(t("product.fullPage")) + "</a>" +
-        '<p class="demo-note">' + escapeHtml(t("product.demoNote")) + "</p>" +
+        (isDemo ? "" : '<p class="demo-note">' + escapeHtml(t("product.demoNote")) + "</p>" +
         '<p class="demo-note">' + escapeHtml(t("product.demoSizes")) + "</p>" +
-        '<p class="demo-note">' + escapeHtml(t("product.delivery")) + "</p>" +
+        '<p class="demo-note">' + escapeHtml(t("product.delivery")) + "</p>") +
       "</div>" +
     "</div>"
   );
@@ -429,9 +430,9 @@ export function openProductDialog(product,options={}) {
   const scroll=document.createElement('div');scroll.className='product-dialog-scroll';
   while(body.firstChild)scroll.append(body.firstChild);
   const footer=document.createElement('div');footer.className='product-dialog-footer';
-  const quantity=scroll.querySelector('[data-qty]').closest('.option-group');
+  const quantity=scroll.querySelector('[data-qty]')?.closest('.option-group');
   const actions=scroll.querySelector('.product-card-actions');
-  footer.append(quantity,actions);body.append(scroll,footer);
+  if(quantity&&actions){footer.append(quantity,actions);body.append(scroll,footer);}else body.append(scroll);
   openDialog(d);
 }
 

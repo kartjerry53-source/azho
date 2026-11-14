@@ -758,5 +758,33 @@
       "instagram": "dvyv3y-jbf4",
       "verified": "caption"
     }
+  },
+  {
+    "id": 9101,
+    "slug": "corset-demo-3d",
+    "name": {
+      "fr": "Corset — démonstration 3D",
+      "ar": "كورسيه — عرض ثلاثي الأبعاد توضيحي",
+      "en": "Corset — 3D demonstration"
+    },
+    "description": {
+      "fr": "Modèle de démonstration pour essayer la vue 3D à 360° : faites-le tourner et zoomez sur les détails. Ce n'est pas un article en vente.",
+      "ar": "نموذج توضيحي لتجربة العرض ثلاثي الأبعاد بزاوية 360°: أديريه وقرّبي التفاصيل. هذا المنتج غير معروض للبيع.",
+      "en": "Demonstration model to try the 360° 3D view: turn it and zoom into the details. This item is not for sale."
+    },
+    "category": "ensemble",
+    "price": null,
+    "regularPrice": null,
+    "promo": false,
+    "priceOnRequest": true,
+    "purchasable": false,
+    "colours": [],
+    "sizes": [],
+    "images": [
+      "assets/products/3d/corset-demo-3d/card.jpg"
+    ],
+    "source": {
+      "demo": "Khronos glTF sample model (Corset), CC0"
+    }
   }
 ]

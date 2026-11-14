@@ -114,6 +114,7 @@ function renderProduct(root, p, related) {
   const colours = p.colours || [];
   const sizes = p.sizes?.length ? p.sizes : [];
   const purchasable = isPurchasable(p);
+  const isDemo = !!(p.source && p.source.demo);   // 3D demonstration item: no price, no order buttons
 
   const thumbs = images.map((src, i) =>
     '<button type="button" data-thumb="' + i + '" aria-pressed="' + (i === 0 ? "true" : "false") + '" aria-label="' + escapeHtml(t("product.imageAlt", { name, n: i + 1 })) + '">' +
@@ -143,11 +144,11 @@ function renderProduct(root, p, related) {
       "</div>" +
       '<div class="product-info">' +
         "<h1>" + escapeHtml(name) + "</h1>" +
-        '<p class="product-price">' + priceHtml(p) + "</p>" +
+        (isDemo ? "" : '<p class="product-price">' + priceHtml(p) + "</p>") +
         "<p>" + escapeHtml(desc) + "</p>" +
         colourHtml +
         sizeHtml +
-        '<div class="option-group"><span>' + escapeHtml(t("product.qty")) + '</span><div class="qty-row">' +
+        (isDemo ? "" : '<div class="option-group"><span>' + escapeHtml(t("product.qty")) + '</span><div class="qty-row">' +
           '<button type="button" data-qty-dec aria-label="' + escapeHtml(t("product.qtyDec")) + '">−</button>' +
           '<input type="number" min="1" max="99" step="1" value="1" data-qty aria-label="' + escapeHtml(t("product.qty")) + '">' +
           '<button type="button" data-qty-inc aria-label="' + escapeHtml(t("product.qtyInc")) + '">+</button>' +
@@ -162,7 +163,7 @@ function renderProduct(root, p, related) {
         '<p class="field-error" role="status" aria-live="polite" data-err></p>' +
         '<p class="demo-note">' + escapeHtml(t("product.demoNote")) + "</p>" +
         '<p class="demo-note">' + escapeHtml(t("product.sizeDemo")) + "</p>" +
-        '<p class="demo-note">' + escapeHtml(t("product.delivery")) + "</p>" +
+        '<p class="demo-note">' + escapeHtml(t("product.delivery")) + "</p>") +
       "</div>" +
     "</div>" +
     (related.length

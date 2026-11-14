@@ -38,5 +38,19 @@
       "tan": "assets/products/3d/test-fbx-set-full/tone-tan.jpg"
     },
     "updated": "2026-11-14"
+  },
+  "9101": {
+    "bytes1k": 560568,
+    "bytes2k": 1059668,
+    "demo": true,
+    "mannequin": false,
+    "mannequinType": "bust",
+    "model1k": "assets/products/3d/corset-demo-3d/model-1k.glb",
+    "model2k": "assets/products/3d/corset-demo-3d/model-2k.glb",
+    "poster": "assets/products/3d/corset-demo-3d/poster.jpg",
+    "slug": "corset-demo-3d",
+    "source": "Corset.glb",
+    "tones": {},
+    "updated": "2026-11-14"
   }
 }
