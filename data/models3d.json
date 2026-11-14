@@ -52,5 +52,25 @@
     "source": "Corset.glb",
     "tones": {},
     "updated": "2026-11-14"
+  },
+  "9102": {
+    "bytes1k": 897624,
+    "bytes2k": 897624,
+    "demo": true,
+    "mannequin": true,
+    "mannequinType": "bust",
+    "model1k": "assets/products/3d/top-briefs/model-1k.glb",
+    "model2k": "assets/products/3d/top-briefs/model-2k.glb",
+    "poster": "assets/products/3d/top-briefs/poster.jpg",
+    "slug": "top-briefs",
+    "source": "top-briefs.obj",
+    "tones": {
+      "deep": "assets/products/3d/top-briefs/tone-deep.jpg",
+      "fair": "assets/products/3d/top-briefs/tone-fair.jpg",
+      "light": "assets/products/3d/top-briefs/tone-light.jpg",
+      "medium": "assets/products/3d/top-briefs/tone-medium.jpg",
+      "tan": "assets/products/3d/top-briefs/tone-tan.jpg"
+    },
+    "updated": "2026-11-14"
   }
 }

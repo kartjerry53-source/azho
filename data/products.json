@@ -786,5 +786,33 @@
     "source": {
       "demo": "Khronos glTF sample model (Corset), CC0"
     }
+  },
+  {
+    "id": 9102,
+    "slug": "top-briefs-demo-3d",
+    "name": {
+      "fr": "Brassière & culotte — démonstration 3D",
+      "ar": "حمالة صدر وسروال داخلي — عرض ثلاثي الأبعاد توضيحي",
+      "en": "Top & briefs — 3D demonstration"
+    },
+    "description": {
+      "fr": "Modèle de démonstration pour essayer la vue 3D à 360° sur notre mannequin : faites-le tourner, zoomez et comparez les cinq carnations. Ce n'est pas un article en vente.",
+      "ar": "نموذج توضيحي لتجربة العرض ثلاثي الأبعاد بزاوية 360° على المانيكان: أديريه وقرّبي وقارني ألوان البشرة الخمسة. هذا المنتج غير معروض للبيع.",
+      "en": "Demonstration model to try the 360° 3D view on our mannequin: turn it, zoom in and compare the five skin tones. This item is not for sale."
+    },
+    "category": "underwear",
+    "price": null,
+    "regularPrice": null,
+    "promo": false,
+    "priceOnRequest": true,
+    "purchasable": false,
+    "colours": [],
+    "sizes": [],
+    "images": [
+      "assets/products/3d/top-briefs/card.jpg"
+    ],
+    "source": {
+      "demo": "Marvelous Designer / CLO sample garment (Top&Briefs_01)"
+    }
   }
 ]
