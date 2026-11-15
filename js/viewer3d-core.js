@@ -252,7 +252,7 @@ export function mountViewer(container, entry, opts = {}) {
       raf = 0;
       if (destroyed) return;
       if (!container.isConnected) { destroy(); return; }
-      if (!visible) return;
+      if (!visible || document.hidden) return;
       // update() returns true while the camera still moves (auto-rotate or damping);
       // once settled we stop the loop and only redraw on demand.
       const moved = controls ? controls.update() : false;
@@ -327,8 +327,9 @@ export function mountViewer(container, entry, opts = {}) {
     }
 
     try {
-      renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: "low-power" });
+      // 1.5 max: Retina at 2x quadruples the GPU work on integrated graphics (old Intel Macs froze)
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
       renderer.outputColorSpace = THREE.SRGBColorSpace;
       renderer.toneMapping = THREE.ACESFilmicToneMapping;
       renderer.toneMappingExposure = 1.0;
@@ -361,6 +362,8 @@ export function mountViewer(container, entry, opts = {}) {
     controls.enablePan = false;
     controls.autoRotate = !reduced;
     controls.autoRotateSpeed = 1.0;
+    // Spin once to show the piece, then stop: an endless spin keeps the GPU busy forever.
+    if (controls.autoRotate) setTimeout(() => { if (controls) { controls.autoRotate = false; scheduleRender(); } }, 8000);
     controls.minPolarAngle = 0.35;
     controls.maxPolarAngle = 1.75;
     controls.addEventListener("start", () => {
